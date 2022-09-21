@@ -6,9 +6,9 @@ import 'package:sizer/sizer.dart';
 
 import '../../theme/cibus.colors.dart';
 
-class TopHeaderWidget extends StatelessWidget {
+class TableHeaderWidget extends StatelessWidget {
   // final Function goToPageRequested;
-  const TopHeaderWidget({
+  const TableHeaderWidget({
     Key? key,
     // required this.goToPageRequested,
   }) : super(key: key);
@@ -45,22 +45,12 @@ class TopHeaderWidget extends StatelessWidget {
                         width: 39.34736.sp,
                         height: 13.64615.sp,
                         child: Center(
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                "../assets/imges/b-arrow.svg",
-                                height: 2.63736.sp,
-                                width: 5.0549.sp,
-                              ),
-                              Padding(padding: EdgeInsets.only(left: 3.5.sp)),
-                              Text(
-                                "Tables",
-                                style: GoogleFonts.sen(
-                                  color: ccNutural550,
-                                  fontSize: 5.714.sp,
-                                ),
-                              ),
-                            ],
+                          child: Text(
+                            "Orders",
+                            style: GoogleFonts.sen(
+                              color: ccNutural550,
+                              fontSize: 5.714.sp,
+                            ),
                           ),
                         ),
                       ),
@@ -74,9 +64,23 @@ class TopHeaderWidget extends StatelessWidget {
                         height: 13.64615.sp,
                         child: Center(
                           child: Text(
-                            "Receipt",
+                            "Tables",
                             style: GoogleFonts.sen(
                               color: ccNeutral0,
+                              fontSize: 5.714.sp,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        color: ccNeutral0,
+                        width: 42.63736.sp,
+                        height: 13.64615.sp,
+                        child: Center(
+                          child: Text(
+                            "Order History",
+                            style: GoogleFonts.sen(
+                              color: ccNutural550,
                               fontSize: 5.714.sp,
                             ),
                           ),
@@ -86,26 +90,13 @@ class TopHeaderWidget extends StatelessWidget {
                   ),
                 ),
               ]),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Receipt # 15",
-                style: GoogleFonts.sen(
-                  color: ccNutural550,
-                  fontSize: 5.sp,
-                ),
-              ),
-              Text(
-                "Garden Table 1",
-                style: GoogleFonts.sen(
-                  color: ccDanger300,
-                  fontSize: 5.sp,
-                ),
-              ),
-            ],
-          ),
+          // Text(
+          //   "Chef n Stuff, Welcome!",
+          //   style: GoogleFonts.sen(
+          //     color: ccDanger300,
+          //     fontSize: 5.sp,
+          //   ),
+          // ),
           Column(mainAxisAlignment: MainAxisAlignment.center,
               // width: 10.w,
               children: [

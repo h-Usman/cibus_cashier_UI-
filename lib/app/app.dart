@@ -23,6 +23,7 @@ import 'package:flutter_application_1/ui/views/qr_menu_feedback/qr_menu_feedback
 import 'package:flutter_application_1/ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
 import 'package:flutter_application_1/ui/views/registartion/registartion_view.dart';
+import 'package:flutter_application_1/ui/views/tables/tables_view.dart';
 import 'package:flutter_application_1/ui/views/translation/translation_view.dart';
 import 'package:flutter_application_1/ui/views/translation_item/translation_item_view.dart';
 import 'package:flutter_application_1/ui/views/translation_modifires/translation_modifires_view.dart';
@@ -72,6 +73,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: TranslationModifiresView),
     MaterialRoute(page: TranslationSurveyView),
     MaterialRoute(page: RegistartionView),
+    MaterialRoute(page: TablesView),
     MaterialRoute(page: LoginView, initial: true),
   ],
   dependencies: [Singleton(classType: NavigationService)],

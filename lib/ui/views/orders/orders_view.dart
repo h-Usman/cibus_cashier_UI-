@@ -52,12 +52,7 @@ class OrdersView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      width: 51.sp,
-                      height: 100.h,
-                      child: MainNavigationMenuWidgetView(),
-                    ),
-                    SizedBox(
-                      width: 100.w - 52.sp,
+                      width: 100.w,
                       height: 100.h,
                       child: Stack(children: [
                         SingleChildScrollView(
@@ -77,887 +72,82 @@ class OrdersView extends StatelessWidget {
                                 Column(
                                   children: [
                                     csvertSpace14,
-                                    Container(
-                                      padding: EdgeInsets.only(
-                                          left: 3.29.sp, right: 3.29.sp),
-                                      // margin: const EdgeInsets.all(15),
-                                      height: 12.sp,
-                                      color: ccNeutral0,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: const <Widget>[
-                                          PageTitlewWidget(
-                                            titleName: 'Orders',
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: EdgeInsets.only(
-                                          left: 3.29.sp, right: 3.29.sp),
-                                      color: ccNeutral0,
-                                      // width: double.infinity,
-                                      // height: double.infinity,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          SizedBox(
-                                            height: 10.98.sp,
-                                            width: 93.40.sp,
-                                            // color: Colors.blue,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                OrdersTabsWidget(
-                                                  goToPageRequested: (val) =>
-                                                      model.goToPage(val),
-                                                  selectedTabName: 'all',
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 10.98.sp,
-                                            width: 135.38.sp,
-                                            child: selectOrder == true
-                                                ? Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        height: 7.47.sp,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                left: 2.197.sp,
-                                                                right:
-                                                                    2.197.sp),
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                            color: ccNutural550,
-                                                          ),
-                                                        ),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Text(
-                                                              'Start Date',
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccNutural550,
-                                                                fontSize:
-                                                                    3.07.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    right: 13.62
-                                                                        .sp)),
-                                                            SvgPicture.asset(
-                                                              "../assets/imges/right-arrow.svg",
-                                                              width: 3.51.sp,
-                                                              height: 1.75.sp,
-                                                            ),
-                                                            Padding(
-                                                                padding: EdgeInsets
-                                                                    .only(
-                                                                        right: 2.41
-                                                                            .sp)),
-                                                            Text(
-                                                              'End Date',
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccNutural550,
-                                                                fontSize:
-                                                                    3.07.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                                padding: EdgeInsets
-                                                                    .only(
-                                                                        right: 11
-                                                                            .sp)),
-                                                            SvgPicture.asset(
-                                                              "../assets/imges/calender.svg",
-                                                              width: 3.296.sp,
-                                                              height: 3.736.sp,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      Container(
-                                                        height: 7.47.sp,
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                left: 1.20.sp,
-                                                                right: 1.20.sp),
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                              color:
-                                                                  ccNutural550),
-                                                        ),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccNeutral0,
-                                                            elevation:
-                                                                0.0, // foreground
-                                                          ),
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/reload.svg",
-                                                            width: 4.17.sp,
-                                                            height: 4.17.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Reload',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccNutural550,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      Container(
-                                                        height: 7.47.sp,
-                                                        width: 29.23.sp,
-                                                        color: ccNeutral0,
-                                                        // padding: EdgeInsets.only(
-                                                        //     left: 1.758.sp,
-                                                        //     right: 1.758.sp),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccDanger300,
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                                    left: 2.758
-                                                                        .sp,
-                                                                    right: 2.758
-                                                                        .sp), // foreground
-                                                          ),
-                                                          onPressed: () {},
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/export-white.svg",
-                                                            width: 3.51.sp,
-                                                            height: 4.39.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Export',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color: ccNeutral0,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  )
-                                                : Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        height: 7.50.sp,
-                                                        width: 43.19.sp,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                            color: ccNutural550,
-                                                          ),
-                                                        ),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccNeutral0, // foreground
-                                                          ),
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/order.svg",
-                                                            width: 4.175.sp,
-                                                            height: 4.175.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Change Status',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccNutural550,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      Container(
-                                                        height: 7.50.sp,
-                                                        width: 42.56.sp,
-                                                        // color: Colors.green,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                              color:
-                                                                  ccNutural550),
-                                                        ),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccNeutral0,
-                                                          ),
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/merge.svg",
-                                                            width: 3.29.sp,
-                                                            height: 3.29.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Merge Orders',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccNutural550,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      SizedBox(
-                                                        height: 7.50.sp,
-                                                        width: 29.23.sp,
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccDanger300, // foreground
-                                                          ),
-                                                          onPressed: () {},
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/delete-white.svg",
-                                                            width: 3.51.sp,
-                                                            height: 4.39.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Delete',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color: ccNeutral0,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    // order tables
-                                    Container(
-                                      color: ccNeutral0,
-                                      child: Column(children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
                                         Container(
-                                          width: 100.w,
-                                          margin: EdgeInsets.all(3.29.sp),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(3.29.sp),
-                                            border:
-                                                Border.all(color: ccNatural250),
-                                          ),
+                                          color: ccNeutral0,
+                                          width: 50.w,
+                                          height: 100.h - 14.sp,
                                           child: Column(
                                             children: [
                                               Container(
+                                                height: 15.3846.sp,
                                                 decoration: const BoxDecoration(
+                                                  color: ccNeutral0,
                                                   border: Border(
                                                     bottom: BorderSide(
-                                                        color: ccNeutral0,
-                                                        width: 0.5),
-                                                  ),
-                                                ),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                                left: 3.29.sp)),
-                                                    Expanded(
-                                                      child: SizedBox(
-                                                        height: 10.98.sp,
-                                                        // width: 20.w,
-                                                        // color: Colors.red,
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          // color: Colors.red,
-                                                          children: <Widget>[
-                                                            Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .end,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  "9 Results Listed",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .sen(
-                                                                    color:
-                                                                        ccNutural550,
-                                                                    fontSize:
-                                                                        3.95.sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                  border: Border(
-                                                    top: BorderSide(
                                                         color: ccNatural250,
-                                                        width: .5),
+                                                        width: 1),
                                                   ),
                                                 ),
                                                 child: Row(
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                      MainAxisAlignment.start,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 23.956.sp,
-                                                      decoration: BoxDecoration(
-                                                          border: Border(
-                                                              right: BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceAround,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          SizedBox(
-                                                            height: 1.97.sp,
-                                                            width: 1.97.sp,
-                                                            child: Checkbox(
-                                                              value: false,
-                                                              onChanged:
-                                                                  (value) {
-                                                                // setState(() {
-                                                                //   _myBoolean = value; // rebuilds with new value
-                                                                // });
-                                                              },
-                                                            ),
-                                                          ),
-                                                          Text(
-                                                            "ID",
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccDanger300,
-                                                              fontSize: 3.95.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ),
-                                                          SizedBox(
-                                                            child: SvgPicture
-                                                                .asset(
-                                                              "../assets/imges/sort.svg",
-                                                              width: 2.63.sp,
-                                                              height: 2.63.sp,
-                                                            ),
-                                                          ),
-                                                        ],
+                                                    cshorzSpace4,
+                                                    SizedBox(
+                                                      width: 66.373.sp,
+                                                      child: Text(
+                                                        "Item Name",
+                                                        style: GoogleFonts.sen(
+                                                          color: ccDanger300,
+                                                          fontSize: 3.736.sp,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                        ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 28.1318.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceAround,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Daily No.",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
+                                                    SizedBox(
+                                                      width: 36.2612.sp,
+                                                      child: Center(
+                                                        child: Text(
+                                                          "Quantity",
+                                                          style:
+                                                              GoogleFonts.sen(
+                                                            color: ccDanger300,
+                                                            fontSize: 3.736.sp,
+                                                            fontWeight:
+                                                                FontWeight.w700,
                                                           ),
-                                                          SizedBox(
-                                                            child: SvgPicture
-                                                                .asset(
-                                                              "../assets/imges/sort.svg",
-                                                              width: 2.63.sp,
-                                                              height: 2.63.sp,
-                                                            ),
-                                                          ),
-                                                        ],
+                                                        ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 32.549.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      // color: Colors.red,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Status",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .only(
-                                                            left: 9.45.sp,
-                                                          )),
-                                                          SizedBox(
-                                                            child: Image.asset(
-                                                              "../assets/imges/filter-colored.png",
-                                                              width: 2.63.sp,
-                                                              height: 2.63.sp,
-                                                            ),
-                                                          ),
-                                                        ],
+                                                    SizedBox(
+                                                      width: 25.0549.sp,
+                                                      child: Text(
+                                                        "Price",
+                                                        style: GoogleFonts.sen(
+                                                          color: ccDanger300,
+                                                          fontSize: 3.736.sp,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                        ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 26.813.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          Padding(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .only(
-                                                            left: 2.sp,
-                                                          )),
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Type",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 27.69.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceAround,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Table",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(
-                                                            child: SvgPicture
-                                                                .asset(
-                                                              "../assets/imges/sort.svg",
-                                                              width: 2.63.sp,
-                                                              height: 2.63.sp,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 20.659.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      // color: Colors.red,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          Padding(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .only(
-                                                            left: 2.sp,
-                                                          )),
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Waiter",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 36.0439.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      // color: Colors.red,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceAround,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          SizedBox(
-                                                            child: Text(
-                                                              "Update Time",
-                                                              style: GoogleFonts
-                                                                  .sen(
-                                                                color:
-                                                                    ccDanger300,
-                                                                fontSize:
-                                                                    3.95.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(
-                                                            child: SvgPicture
-                                                                .asset(
-                                                              "../assets/imges/sort.svg",
-                                                              width: 2.63.sp,
-                                                              height: 2.63.sp,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Container(
-                                                      height: 6.6.sp,
-                                                      width: 18.4615.sp,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              border: Border(
-                                                                  right:
-                                                                      BorderSide(
-                                                        width: 0.5,
-                                                        color: ccNutural550,
-                                                      ))),
-                                                      // color: Colors.red,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: <Widget>[
-                                                          Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .end,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              SizedBox(
-                                                                child: Text(
-                                                                  "Total",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .sen(
-                                                                    color:
-                                                                        ccDanger300,
-                                                                    fontSize:
-                                                                        3.95.sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Expanded(
-                                                      child: SizedBox(
-                                                        height: 6.6.sp,
-                                                        // width: 28.571.sp,
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: <Widget>[
-                                                            Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .end,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                SizedBox(
-                                                                  child: Text(
-                                                                    "Action",
-                                                                    style:
-                                                                        GoogleFonts
-                                                                            .sen(
-                                                                      color: Colors
-                                                                          .transparent,
-                                                                      fontSize:
-                                                                          3.95.sp,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ],
+                                                    SizedBox(
+                                                      child: Text(
+                                                        "Total",
+                                                        style: GoogleFonts.sen(
+                                                          color: ccDanger300,
+                                                          fontSize: 3.736.sp,
+                                                          fontWeight:
+                                                              FontWeight.w700,
                                                         ),
                                                       ),
                                                     ),
@@ -965,38 +155,786 @@ class OrdersView extends StatelessWidget {
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: 100.h - 80.sp,
+                                                height: 100.h - 72.967.sp,
                                                 child: ListView.builder(
                                                     itemCount: 18,
                                                     itemBuilder:
                                                         (context, index) {
                                                       return OrderListItemWidget(
-                                                          goToModalRequested:
-                                                              () {},
-                                                          selected: false,
-                                                          idNo: "1001",
-                                                          dailyNo: "1",
-                                                          status: "Preparing",
-                                                          type: "Dine-in",
-                                                          table: "Table No 2",
-                                                          waiter: "Waiter 1",
-                                                          updateDate: "Today",
-                                                          updateTime:
-                                                              "10:15:00",
-                                                          total: "RM 200",
-                                                          orderItemId: "1",
-                                                          goToPageRequested:
-                                                              (val) => model
-                                                                  .goToPage(
-                                                                      val));
+                                                        iName: 'Gazpacho',
+                                                        iType: 'Medium',
+                                                        price: '20.00',
+                                                        total: '20.00',
+                                                      );
                                                     }),
                                               ),
-                                              csvertSpace4,
+                                              Expanded(
+                                                child: Container(
+                                                  padding: EdgeInsets.only(
+                                                      left: 3.sp, right: 3.sp),
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    color: ccNeutral0,
+                                                    border: Border(
+                                                      top: BorderSide(
+                                                          color: ccNatural250,
+                                                          width: 1),
+                                                    ),
+                                                  ),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      ExpansionTile(
+                                                        tilePadding:
+                                                            EdgeInsets.only(
+                                                                left: 0,
+                                                                top: 0,
+                                                                right: 0),
+                                                        collapsedIconColor:
+                                                            ccDanger300,
+                                                        iconColor: ccDanger300,
+                                                        title: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Text(
+                                                              "Items Total",
+                                                              style: GoogleFonts
+                                                                  .sen(
+                                                                color:
+                                                                    ccNutural550,
+                                                                fontSize:
+                                                                    4.3956.sp,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              "RM 50.00",
+                                                              style: GoogleFonts
+                                                                  .sen(
+                                                                color:
+                                                                    ccNutural550,
+                                                                fontSize:
+                                                                    4.3956.sp,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        children: [
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceBetween,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              Text(
+                                                                "Service Tax @ 6%",
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .sen(
+                                                                  color:
+                                                                      ccNutural550,
+                                                                  fontSize:
+                                                                      4.3956.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                "RM 3.00",
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .sen(
+                                                                  color:
+                                                                      ccNutural550,
+                                                                  fontSize:
+                                                                      4.3956.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          csvertSpace2
+                                                        ],
+                                                      ),
+                                                      csvertSpace2,
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Text(
+                                                            "Total",
+                                                            style:
+                                                                GoogleFonts.sen(
+                                                              color:
+                                                                  ccNutural550,
+                                                              fontSize:
+                                                                  4.3956.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            "RM 58.00",
+                                                            style:
+                                                                GoogleFonts.sen(
+                                                              color:
+                                                                  ccNutural550,
+                                                              fontSize:
+                                                                  4.3956.sp,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      csvertSpace4,
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceBetween,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              Container(
+                                                                height:
+                                                                    11.648.sp,
+                                                                width:
+                                                                    22.41758.sp,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          2.1978
+                                                                              .sp),
+                                                                  border: Border
+                                                                      .all(
+                                                                    color:
+                                                                        ccNutural550,
+                                                                  ),
+                                                                ),
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                child:
+                                                                    Container(
+                                                                  color:
+                                                                      ccNeutral0,
+                                                                  child:
+                                                                      FloatingActionButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      // do your thing here
+                                                                    },
+                                                                    shape:
+                                                                        RoundedRectangleBorder(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              2.1978.sp),
+                                                                    ),
+                                                                    backgroundColor:
+                                                                        ccNeutral0,
+                                                                    child: SvgPicture
+                                                                        .asset(
+                                                                      "../assets/imges/ellipse.svg",
+                                                                      width: 3.73
+                                                                          .sp,
+                                                                      height:
+                                                                          3.73.sp,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              cshorzSpace5,
+                                                              Container(
+                                                                height:
+                                                                    11.648.sp,
+                                                                width:
+                                                                    22.41758.sp,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          2.1978
+                                                                              .sp),
+                                                                  border: Border
+                                                                      .all(
+                                                                    color:
+                                                                        ccNutural550,
+                                                                  ),
+                                                                ),
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                child:
+                                                                    Container(
+                                                                  color:
+                                                                      ccNeutral0,
+                                                                  child:
+                                                                      FloatingActionButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      // do your thing here
+                                                                    },
+                                                                    shape:
+                                                                        RoundedRectangleBorder(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              2.1978.sp),
+                                                                    ),
+                                                                    backgroundColor:
+                                                                        ccNeutral0,
+                                                                    child: SvgPicture
+                                                                        .asset(
+                                                                      "../assets/imges/print.svg",
+                                                                      width: 3.73
+                                                                          .sp,
+                                                                      height:
+                                                                          3.73.sp,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          SizedBox(
+                                                            height: 11.648.sp,
+                                                            width: 52.527.sp,
+                                                            child:
+                                                                ElevatedButton(
+                                                              style:
+                                                                  ElevatedButton
+                                                                      .styleFrom(
+                                                                backgroundColor:
+                                                                    ccDanger300,
+                                                                shape:
+                                                                    RoundedRectangleBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          2.1978
+                                                                              .sp),
+                                                                ),
+                                                              ),
+                                                              onPressed: () {},
+                                                              child: Text(
+                                                                'Pay',
+                                                                style: TextStyle(
+                                                                    fontSize:
+                                                                        4.3956
+                                                                            .sp,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      csvertSpace2,
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
-                                        csvertSpace12,
-                                      ]),
+                                        Container(
+                                          color: ccDanger100,
+                                          width: 50.w,
+                                          height: 100.h - 64,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: 13.sp,
+                                                padding:
+                                                    EdgeInsets.only(left: 3.sp),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      "All Products",
+                                                      style: GoogleFonts.sen(
+                                                        color: ccNutural550,
+                                                        fontSize: 3.7362.sp,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      padding: EdgeInsets.only(
+                                                        right: 4.5.sp,
+                                                        // bottom: 5.sp,
+                                                      ),
+                                                      width: 68.131.sp,
+                                                      height: 7.47.sp,
+                                                      child: TextField(
+                                                        textAlign:
+                                                            TextAlign.left,
+                                                        decoration:
+                                                            InputDecoration(
+                                                          border:
+                                                              OutlineInputBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        1.098
+                                                                            .sp),
+                                                          ),
+                                                          contentPadding:
+                                                              EdgeInsets.all(
+                                                                  2.197.sp),
+                                                          filled: true,
+                                                          hintStyle:
+                                                              const TextStyle(
+                                                            color: ccNutural550,
+                                                          ),
+                                                          hintText:
+                                                              "Type to Search",
+                                                          fillColor: ccNeutral0,
+                                                          suffixIcon: Container(
+                                                            padding:
+                                                                EdgeInsets.all(
+                                                                    2.sp),
+                                                            child: SvgPicture
+                                                                .asset(
+                                                              "../assets/imges/search.svg",
+                                                              width: 3.736.sp,
+                                                              height: 3.736.sp,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              Wrap(
+                                                  spacing: 4.sp,
+                                                  runSpacing: 4.sp,
+                                                  children: [
+                                                    Container(
+                                                      width: 42.857.sp,
+                                                      height: 38.681.sp,
+                                                      decoration: BoxDecoration(
+                                                        // color: ccSuccess800,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    2.2.sp),
+                                                        border: Border.all(
+                                                          width: 0.5,
+                                                          color: ccNutural550,
+                                                        ),
+                                                      ),
+                                                      child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Image.asset(
+                                                            "../assets/imges/sect.png",
+                                                            width: 42.857.sp,
+                                                            height: 30.549.sp,
+                                                          ),
+                                                          Container(
+                                                            height: 7.50.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: ccNeutral0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .start,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                cshorzSpace2,
+                                                                Text(
+                                                                  "Starters",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .sen(
+                                                                    color:
+                                                                        ccDanger300,
+                                                                    fontSize:
+                                                                        3.5164
+                                                                            .sp,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: 42.857.sp,
+                                                      height: 38.681.sp,
+                                                      decoration: BoxDecoration(
+                                                        // color: ccSuccess800,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    2.2.sp),
+                                                        border: Border.all(
+                                                          width: 0.5,
+                                                          color: ccNutural550,
+                                                        ),
+                                                      ),
+                                                      child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Container(
+                                                            height: 30.549.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color:
+                                                                  ccNatural250,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "SA",
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .sen(
+                                                                  color:
+                                                                      ccNutural550,
+                                                                  fontSize:
+                                                                      13.1868
+                                                                          .sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            height: 7.50.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: ccNeutral0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .start,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                cshorzSpace2,
+                                                                Text(
+                                                                  "Salads",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .sen(
+                                                                    color:
+                                                                        ccDanger300,
+                                                                    fontSize:
+                                                                        3.5164
+                                                                            .sp,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: 42.857.sp,
+                                                      height: 38.681.sp,
+                                                      decoration: BoxDecoration(
+                                                        // color: ccSuccess800,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    2.2.sp),
+                                                        border: Border.all(
+                                                          width: 0.5,
+                                                          color: ccNutural550,
+                                                        ),
+                                                      ),
+                                                      child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Container(
+                                                            height: 30.549.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color:
+                                                                  ccNatural250,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "MC",
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .sen(
+                                                                  color:
+                                                                      ccNutural550,
+                                                                  fontSize:
+                                                                      13.1868
+                                                                          .sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            height: 7.50.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: ccNeutral0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .start,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                cshorzSpace2,
+                                                                Text(
+                                                                  "Main Course",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .sen(
+                                                                    color:
+                                                                        ccDanger300,
+                                                                    fontSize:
+                                                                        3.5164
+                                                                            .sp,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      width: 42.857.sp,
+                                                      height: 38.681.sp,
+                                                      decoration: BoxDecoration(
+                                                        // color: ccSuccess800,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    2.2.sp),
+                                                        border: Border.all(
+                                                          width: 0.5,
+                                                          color: ccNutural550,
+                                                        ),
+                                                      ),
+                                                      child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Container(
+                                                            height: 30.549.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color:
+                                                                  ccNatural250,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Center(
+                                                              child: Text(
+                                                                "DR",
+                                                                style:
+                                                                    GoogleFonts
+                                                                        .sen(
+                                                                  color:
+                                                                      ccNutural550,
+                                                                  fontSize:
+                                                                      13.1868
+                                                                          .sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            height: 7.50.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: ccNeutral0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                              ),
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .start,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                cshorzSpace2,
+                                                                Text(
+                                                                  "Drinks",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .sen(
+                                                                    color:
+                                                                        ccDanger300,
+                                                                    fontSize:
+                                                                        3.5164
+                                                                            .sp,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ]),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -1008,19 +946,15 @@ class OrdersView extends StatelessWidget {
                           alignment: Alignment.topCenter,
                           child: TopHeaderWidget(),
                         ),
-                        Align(
-                            alignment: Alignment.bottomCenter,
-                            child: FooterWidget()),
+                        // Align(
+                        //     alignment: Alignment.bottomCenter,
+                        //     child: FooterWidget()),
                       ]),
                     ),
                   ],
                 ),
               ),
             ),
-            // drawer: LeftMenuWidget(
-            //   goToPageRequested: (value) => model.goToPage(value),
-            //   goToModalRequested: goToModalRequested,
-            // ),
           ),
         );
       },

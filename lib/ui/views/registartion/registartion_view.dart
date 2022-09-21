@@ -1103,53 +1103,6 @@ class RegistartionView extends StatelessWidget {
                                                                                     ],
                                                                                   ),
                                                                                 ),
-                                                                                // actions: [
-                                                                                //   Row(
-                                                                                //     mainAxisAlignment: MainAxisAlignment.start,
-                                                                                //     crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                //     children: [
-                                                                                //       Padding(
-                                                                                //           padding: EdgeInsets.only(
-                                                                                //         left: 5.sp,
-                                                                                //       )),
-                                                                                //       Container(
-                                                                                //         height: 9.25.sp,
-                                                                                //         width: 29.23.sp,
-                                                                                //         margin: EdgeInsets.only(
-                                                                                //           bottom: 4.39.sp,
-                                                                                //         ),
-                                                                                //         // color: Colors.green,
-                                                                                //         decoration: BoxDecoration(
-                                                                                //           borderRadius: BorderRadius.circular(1.098.sp),
-                                                                                //           border: Border.all(color: ccDanger300),
-                                                                                //         ),
-                                                                                //         child: ElevatedButton.icon(
-                                                                                //           onPressed: () {
-                                                                                //             Navigator.pop(context);
-                                                                                //           },
-                                                                                //           style: ElevatedButton.styleFrom(
-                                                                                //             backgroundColor: ccDanger300,
-                                                                                //             elevation: 0,
-                                                                                //             shadowColor: Colors.transparent,
-                                                                                //           ),
-                                                                                //           icon: SvgPicture.asset(
-                                                                                //             "../assets/imges/check-white.svg",
-                                                                                //             width: 4.17.sp,
-                                                                                //             height: 3.07.sp,
-                                                                                //           ),
-                                                                                //           label: Text(
-                                                                                //             'Open',
-                                                                                //             style: GoogleFonts.sen(
-                                                                                //               color: ccNeutral0,
-                                                                                //               fontSize: 4.39.sp,
-                                                                                //               fontWeight: FontWeight.w400,
-                                                                                //             ),
-                                                                                //           ), // <-- Text
-                                                                                //         ),
-                                                                                //       ),
-                                                                                //     ],
-                                                                                //   ),
-                                                                                // ],
                                                                               ),
                                                                             );
                                                                           },
@@ -1370,6 +1323,8 @@ class RegistartionView extends StatelessWidget {
                                                               onPressed: () {
                                                                 Navigator.pop(
                                                                     context);
+                                                                model
+                                                                    .goToDashboard();
                                                               },
                                                               style:
                                                                   ElevatedButton
@@ -1399,7 +1354,7 @@ class RegistartionView extends StatelessWidget {
                                                                       FontWeight
                                                                           .w400,
                                                                 ),
-                                                              ), // <-- Text
+                                                              ),
                                                             ),
                                                           ),
                                                         ],

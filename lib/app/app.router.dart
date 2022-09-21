@@ -35,6 +35,7 @@ import '../ui/views/qr_menu_feedback/qr_menu_feedback_view.dart';
 import '../ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import '../ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
 import '../ui/views/registartion/registartion_view.dart';
+import '../ui/views/tables/tables_view.dart';
 import '../ui/views/translation/translation_view.dart';
 import '../ui/views/translation_item/translation_item_view.dart';
 import '../ui/views/translation_modifires/translation_modifires_view.dart';
@@ -88,6 +89,7 @@ class Routes {
   static const String translationModifiresView = '/translation-modifires-view';
   static const String translationSurveyView = '/translation-survey-view';
   static const String registartionView = '/registartion-view';
+  static const String tablesView = '/tables-view';
   static const String loginView = '/';
   static const all = <String>{
     homeView,
@@ -124,6 +126,7 @@ class Routes {
     translationModifiresView,
     translationSurveyView,
     registartionView,
+    tablesView,
     loginView,
   };
 }
@@ -171,6 +174,7 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.translationModifiresView, page: TranslationModifiresView),
     RouteDef(Routes.translationSurveyView, page: TranslationSurveyView),
     RouteDef(Routes.registartionView, page: RegistartionView),
+    RouteDef(Routes.tablesView, page: TablesView),
     RouteDef(Routes.loginView, page: LoginView),
   ];
   @override
@@ -380,6 +384,12 @@ class StackedRouter extends RouterBase {
     RegistartionView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const RegistartionView(),
+        settings: data,
+      );
+    },
+    TablesView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const TablesView(),
         settings: data,
       );
     },
@@ -946,6 +956,22 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       Routes.registartionView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToTablesView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.tablesView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,
