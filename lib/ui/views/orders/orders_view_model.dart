@@ -9,34 +9,16 @@ class OrdersViewModel extends BaseViewModel {
 
   goToPage(String pageName) {
     switch (pageName) {
-      case 'dashboard':
-        return _nav.navigateTo(Routes.homeView);
       case 'order':
         return _nav.navigateTo(Routes.ordersView);
-      case 'menu':
-        return _nav.navigateTo(Routes.menuManagementMenuView);
-      case 'orders_details':
-        return _nav.navigateTo(Routes.ordersDetailsView);
-      case 'milti_select_orders':
-        return _nav.navigateTo(Routes.multiOrdersSelectView);
-      case 'details_milti_select_orders':
-        return _nav.navigateTo(Routes.orderDetailsMultiSelectView);
-      case 'veune_location':
-        return _nav.navigateTo(Routes.venueSettingsLocationView);
+      case 'items_of_section':
+        return _nav.navigateTo(Routes.itemsOfSectionView);
+      case 'change_order':
+        return _nav.navigateTo(Routes.changeOrderView);
+      case 'pay':
+        return _nav.navigateTo(Routes.payView);
       default:
         return;
     }
-  }
-
-  goToMultiOrdersSelecPage() {
-    _nav.navigateTo(Routes.multiOrdersSelectView);
-  }
-
-  goToOrdersDetailsPage() {
-    _nav.navigateTo(Routes.ordersDetailsView);
-  }
-
-  goToOrdersDetailMultiSelectsPage() {
-    _nav.navigateTo(Routes.orderDetailsMultiSelectView);
   }
 }

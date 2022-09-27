@@ -177,8 +177,6 @@ class VenueSettingsStafView extends StatelessWidget {
                                                         showSideDialogue(
                                                       context: context,
                                                       title: "Add Staff Member",
-                                                      cancelButtonText:
-                                                          "Cancel",
                                                       saveButtonText: "Save",
                                                       saveButtonPressed:
                                                           (dynamic val) {

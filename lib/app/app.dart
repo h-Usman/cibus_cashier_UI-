@@ -1,9 +1,11 @@
 import 'package:flutter_application_1/ui/views/add_extra_charges/add_extra_charges_view.dart';
 import 'package:flutter_application_1/ui/views/add_new_veune/add_new_veune_view.dart';
+import 'package:flutter_application_1/ui/views/change_order/change_order_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_form_add_questions/feedback_form_add_questions_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_forms/feedback_forms_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_results/feedback_results_view.dart';
 import 'package:flutter_application_1/ui/views/home/home_view.dart';
+import 'package:flutter_application_1/ui/views/items_of_section/items_of_section_view.dart';
 import 'package:flutter_application_1/ui/views/login/login_view.dart';
 import 'package:flutter_application_1/ui/views/master/master_view.dart';
 import 'package:flutter_application_1/ui/views/menu_management_modifiers/menu_management_modifiers_view.dart';
@@ -16,6 +18,7 @@ import 'package:flutter_application_1/ui/views/order_details_multi_select/order_
 import 'package:flutter_application_1/ui/views/orders/orders_view.dart';
 import 'package:flutter_application_1/ui/views/orders_details/orders_details_view.dart';
 import 'package:flutter_application_1/ui/views/menu_management_menu/menu_management_menu_view.dart';
+import 'package:flutter_application_1/ui/views/pay/pay_view.dart';
 import 'package:flutter_application_1/ui/views/price_edit/price_edit_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_design/qr_menu_design_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_display_options/qr_menu_display_options_view.dart';
@@ -23,6 +26,7 @@ import 'package:flutter_application_1/ui/views/qr_menu_feedback/qr_menu_feedback
 import 'package:flutter_application_1/ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
 import 'package:flutter_application_1/ui/views/registartion/registartion_view.dart';
+import 'package:flutter_application_1/ui/views/select_table/select_table_view.dart';
 import 'package:flutter_application_1/ui/views/tables/tables_view.dart';
 import 'package:flutter_application_1/ui/views/translation/translation_view.dart';
 import 'package:flutter_application_1/ui/views/translation_item/translation_item_view.dart';
@@ -40,8 +44,7 @@ import 'package:stacked_services/stacked_services.dart';
 @StackedApp(
   routes: [
     MaterialRoute(page: HomeView),
-    MaterialRoute(page: OrdersView),
-    MaterialRoute(page: OrdersDetailsView),
+
     MaterialRoute(page: OrderDetailsMultiSelectView),
     MaterialRoute(page: ModalDeleteView),
     MaterialRoute(page: ModalOrderStatusView),
@@ -72,8 +75,15 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: TranslationItemView),
     MaterialRoute(page: TranslationModifiresView),
     MaterialRoute(page: TranslationSurveyView),
+    // uses pages
+    MaterialRoute(page: SelectTableView),
+    MaterialRoute(page: OrdersView),
+    MaterialRoute(page: OrdersDetailsView),
+    MaterialRoute(page: PayView),
+    MaterialRoute(page: ChangeOrderView),
     MaterialRoute(page: RegistartionView),
     MaterialRoute(page: TablesView),
+    MaterialRoute(page: ItemsOfSectionView),
     MaterialRoute(page: LoginView, initial: true),
   ],
   dependencies: [Singleton(classType: NavigationService)],

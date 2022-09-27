@@ -132,7 +132,6 @@ class ItemsTabsWidget extends StatelessWidget {
                       showSideDialogue(
                         context: context,
                         title: "Add Item",
-                        cancelButtonText: "Cancel",
                         saveButtonText: "Save",
                         saveButtonPressed: (dynamic val) {
                           // ignore: avoid_print
@@ -347,7 +346,6 @@ class ItemsTabsWidget extends StatelessWidget {
                           showSideDialogue(
                             context: context,
                             title: "Add Item",
-                            cancelButtonText: "Cancel",
                             saveButtonText: "Save",
                             saveButtonPressed: (dynamic val) {
                               // ignore: avoid_print
@@ -532,7 +530,6 @@ class ItemsTabsWidget extends StatelessWidget {
                         showSideDialogue(
                           context: context,
                           title: "Add Item",
-                          cancelButtonText: "Cancel",
                           saveButtonText: "Save",
                           saveButtonPressed: (dynamic val) {
                             // ignore: avoid_print

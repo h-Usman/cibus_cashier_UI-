@@ -226,8 +226,6 @@ class _VenueSettingsTablesViewState extends State<VenueSettingsTablesView> {
                                                         showSideDialogue(
                                                       context: context,
                                                       title: "Add New Tables",
-                                                      cancelButtonText:
-                                                          "Cancel",
                                                       saveButtonText: "Add",
                                                       saveButtonPressed:
                                                           (dynamic val) {

@@ -128,8 +128,6 @@ class FeedbackFormAddQuestionsView extends StatelessWidget {
                                                         showSideDialogue(
                                                       context: context,
                                                       title: "Add Section",
-                                                      cancelButtonText:
-                                                          "Cancel",
                                                       saveButtonText: "Save",
                                                       saveButtonPressed:
                                                           (dynamic val) {

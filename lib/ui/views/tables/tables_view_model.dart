@@ -9,6 +9,8 @@ class TablesViewModel extends BaseViewModel {
 
   goToPage(String pageName) {
     switch (pageName) {
+      case 'orders_details':
+        return _nav.navigateTo(Routes.ordersDetailsView);
       case 'orders':
         return _nav.navigateTo(Routes.ordersView);
       default:

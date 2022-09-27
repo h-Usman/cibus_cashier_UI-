@@ -121,7 +121,6 @@ class VenueTableRowWidget extends StatelessWidget {
                     onTap: () => showSideDialogue(
                       context: context,
                       title: "Edit Garden 1",
-                      cancelButtonText: "Cancel",
                       saveButtonText: "Confirm",
                       saveButtonPressed: (dynamic val) {
                         // ignore: avoid_print

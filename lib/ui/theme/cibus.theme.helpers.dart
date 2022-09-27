@@ -17,6 +17,7 @@ Widget cshorzSpace9 = SizedBox(width: 9.sp);
 Widget cshorzSpace10 = SizedBox(width: 10.sp);
 Widget cshorzSpace12 = SizedBox(width: 12.sp);
 Widget cshorzSpace16 = SizedBox(width: 16.sp);
+Widget cshorzSpace18 = SizedBox(width: 18.sp);
 Widget cshorzSpace20 = SizedBox(width: 20.sp);
 Widget cshorzSpace24 = SizedBox(width: 24.sp);
 Widget cshorzSpace32 = SizedBox(width: 32.sp);

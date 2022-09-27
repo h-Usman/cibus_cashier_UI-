@@ -213,8 +213,6 @@ class MenuSearchView extends StatelessWidget {
                                                           showSideDialogue(
                                                         context: context,
                                                         title: "Add Item",
-                                                        cancelButtonText:
-                                                            "Cancel",
                                                         saveButtonText: "Save",
                                                         saveButtonPressed:
                                                             (dynamic val) {
@@ -1150,8 +1148,6 @@ class MenuSearchView extends StatelessWidget {
                                                           showSideDialogue(
                                                         context: context,
                                                         title: "Add Section",
-                                                        cancelButtonText:
-                                                            "Cancel",
                                                         saveButtonText: "Save",
                                                         saveButtonPressed:
                                                             (dynamic val) {

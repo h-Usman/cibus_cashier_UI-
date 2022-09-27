@@ -46,7 +46,6 @@ class MasterView extends StatelessWidget {
                         onTap: () => showSideDialogue(
                           context: context,
                           title: "Dialog Menu",
-                          cancelButtonText: "Cancel",
                           saveButtonText: "Save",
                           saveButtonPressed: (dynamic val) {
                             print("hello i am clicked with $val");

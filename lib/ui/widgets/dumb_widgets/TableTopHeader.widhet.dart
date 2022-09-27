@@ -7,10 +7,12 @@ import 'package:sizer/sizer.dart';
 import '../../theme/cibus.colors.dart';
 
 class TableHeaderWidget extends StatelessWidget {
-  // final Function goToPageRequested;
+  final String selectedTabName;
+  final Function goToPageRequested;
   const TableHeaderWidget({
     Key? key,
-    // required this.goToPageRequested,
+    required this.goToPageRequested,
+    required this.selectedTabName,
   }) : super(key: key);
 
   @override
@@ -38,49 +40,67 @@ class TableHeaderWidget extends StatelessWidget {
                 SizedBox(
                   child: Row(
                     children: [
-                      // InkWell(
-                      // child:
-                      Container(
-                        color: ccNeutral0,
-                        width: 39.34736.sp,
-                        height: 13.64615.sp,
-                        child: Center(
-                          child: Text(
-                            "Orders",
-                            style: GoogleFonts.sen(
-                              color: ccNutural550,
-                              fontSize: 5.714.sp,
+                      InkWell(
+                        child: Container(
+                          // color: ccNeutral0,
+                          color: selectedTabName == "order"
+                              ? ccDanger300
+                              : ccNeutral0,
+                          width: 39.34736.sp,
+                          height: 13.64615.sp,
+                          child: Center(
+                            child: Text(
+                              "Orders",
+                              style: GoogleFonts.sen(
+                                color: selectedTabName == "order"
+                                    ? ccNeutral0
+                                    : ccNutural550,
+                                fontSize: 5.714.sp,
+                              ),
                             ),
                           ),
                         ),
+                        onTap: () {
+                          goToPageRequested('orders_details');
+                        },
                       ),
-                      //   onTap: () {
-                      //     goToPageRequested('orders');
-                      //   },
-                      // ),
-                      Container(
-                        color: ccDanger300,
-                        width: 42.63736.sp,
-                        height: 13.64615.sp,
-                        child: Center(
-                          child: Text(
-                            "Tables",
-                            style: GoogleFonts.sen(
-                              color: ccNeutral0,
-                              fontSize: 5.714.sp,
+                      InkWell(
+                        child: Container(
+                          // color: ccDanger300,
+                          color: selectedTabName == "table"
+                              ? ccDanger300
+                              : ccNeutral0,
+                          width: 42.63736.sp,
+                          height: 13.64615.sp,
+                          child: Center(
+                            child: Text(
+                              "Tables",
+                              style: GoogleFonts.sen(
+                                color: selectedTabName == "table"
+                                    ? ccNeutral0
+                                    : ccNutural550,
+                                fontSize: 5.714.sp,
+                              ),
                             ),
                           ),
                         ),
+                        onTap: () {
+                          goToPageRequested('table');
+                        },
                       ),
                       Container(
-                        color: ccNeutral0,
+                        color: selectedTabName == "history"
+                            ? ccDanger300
+                            : ccNeutral0,
                         width: 42.63736.sp,
                         height: 13.64615.sp,
                         child: Center(
                           child: Text(
                             "Order History",
                             style: GoogleFonts.sen(
-                              color: ccNutural550,
+                              color: selectedTabName == "history"
+                                  ? ccNeutral0
+                                  : ccNutural550,
                               fontSize: 5.714.sp,
                             ),
                           ),

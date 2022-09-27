@@ -146,15 +146,14 @@ class MenuManagementMenuView extends StatelessWidget {
                                                             ElevatedButton.icon(
                                                           style: ElevatedButton
                                                               .styleFrom(
-                                                            backgroundColor: ccDanger300, // foreground
+                                                            backgroundColor:
+                                                                ccDanger300, // foreground
                                                           ),
                                                           onPressed: () =>
                                                               showSideDialogue(
                                                             context: context,
                                                             title:
                                                                 "Add new Menu",
-                                                            cancelButtonText:
-                                                                "Cancel",
                                                             saveButtonText:
                                                                 "Save",
                                                             saveButtonPressed:

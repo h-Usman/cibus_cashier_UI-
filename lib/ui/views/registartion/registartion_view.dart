@@ -1418,8 +1418,8 @@ class RegistartionView extends StatelessWidget {
                                                 onPressed: () {},
                                                 child: SvgPicture.asset(
                                                   "../assets/imges/erase.svg",
-                                                  height: 6.1538.sp,
-                                                  width: 9.89.sp,
+                                                  height: 4.1538.sp,
+                                                          width: 7.89.sp,
                                                 ),
                                               )),
                                         ],

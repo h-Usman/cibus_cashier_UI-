@@ -3,7 +3,6 @@ import 'package:flutter_application_1/ui/widgets/dumb_widgets/footer.widget.dart
 import 'package:stacked/stacked.dart';
 
 import '../../theme/cibus.colors.dart';
-import '../../widgets/dumb_widgets/order_list_item.widget.dart';
 import '../../widgets/dumb_widgets/top_header.widget.dart';
 import './multi_orders_select_view_model.dart';
 import 'package:flutter_svg/svg.dart';

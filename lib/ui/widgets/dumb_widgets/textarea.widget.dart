@@ -52,6 +52,8 @@ class TextAreaWidget extends StatelessWidget {
               //         text:
               //             "36, Jalan Perdana 6/6, Pandan Perdana, 55300 Kuala Lumpur, Selangor, Malaysia"),
               decoration: InputDecoration(
+                filled: true,
+                fillColor: ccNeutral0,
                 contentPadding: EdgeInsets.all(2.63.sp),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(3.296.sp),

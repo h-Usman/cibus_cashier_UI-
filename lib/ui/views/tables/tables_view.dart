@@ -87,7 +87,10 @@ class TablesView extends StatelessWidget {
                     ),
                     Align(
                       alignment: Alignment.topCenter,
-                      child: TableHeaderWidget(),
+                      child: TableHeaderWidget(
+                        goToPageRequested: (val) => {model.goToPage(val)},
+                        selectedTabName: 'table',
+                      ),
                     ),
                     Align(
                       alignment: Alignment.bottomCenter,

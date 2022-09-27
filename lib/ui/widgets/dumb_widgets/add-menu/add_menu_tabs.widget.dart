@@ -130,7 +130,6 @@ class AddMenuTabsWidget extends StatelessWidget {
                     showSideDialogue(
                       context: context,
                       title: "Add new Menu",
-                      cancelButtonText: "Cancel",
                       saveButtonText: "Save",
                       saveButtonPressed: (dynamic val) {
                         // ignore: avoid_print
@@ -624,7 +623,6 @@ class AddMenuTabsWidget extends StatelessWidget {
                         showSideDialogue(
                           context: context,
                           title: "Add new Menu",
-                          cancelButtonText: "Cancel",
                           saveButtonText: "Save",
                           saveButtonPressed: (dynamic val) {
                             // ignore: avoid_print
@@ -750,7 +748,6 @@ class AddMenuTabsWidget extends StatelessWidget {
                       showSideDialogue(
                         context: context,
                         title: "Add new Menu",
-                        cancelButtonText: "Cancel",
                         saveButtonText: "Save",
                         saveButtonPressed: (dynamic val) {
                           // ignore: avoid_print

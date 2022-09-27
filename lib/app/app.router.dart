@@ -12,10 +12,12 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../ui/views/add_extra_charges/add_extra_charges_view.dart';
 import '../ui/views/add_new_veune/add_new_veune_view.dart';
+import '../ui/views/change_order/change_order_view.dart';
 import '../ui/views/feedback_form_add_questions/feedback_form_add_questions_view.dart';
 import '../ui/views/feedback_forms/feedback_forms_view.dart';
 import '../ui/views/feedback_results/feedback_results_view.dart';
 import '../ui/views/home/home_view.dart';
+import '../ui/views/items_of_section/items_of_section_view.dart';
 import '../ui/views/login/login_view.dart';
 import '../ui/views/master/master_view.dart';
 import '../ui/views/menu_management_menu/menu_management_menu_view.dart';
@@ -28,6 +30,7 @@ import '../ui/views/multi_orders_select/multi_orders_select_view.dart';
 import '../ui/views/order_details_multi_select/order_details_multi_select_view.dart';
 import '../ui/views/orders/orders_view.dart';
 import '../ui/views/orders_details/orders_details_view.dart';
+import '../ui/views/pay/pay_view.dart';
 import '../ui/views/price_edit/price_edit_view.dart';
 import '../ui/views/qr_menu_design/qr_menu_design_view.dart';
 import '../ui/views/qr_menu_display_options/qr_menu_display_options_view.dart';
@@ -35,6 +38,7 @@ import '../ui/views/qr_menu_feedback/qr_menu_feedback_view.dart';
 import '../ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import '../ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
 import '../ui/views/registartion/registartion_view.dart';
+import '../ui/views/select_table/select_table_view.dart';
 import '../ui/views/tables/tables_view.dart';
 import '../ui/views/translation/translation_view.dart';
 import '../ui/views/translation_item/translation_item_view.dart';
@@ -49,8 +53,6 @@ import '../ui/views/venue_settings_tables/venue_settings_tables_view.dart';
 
 class Routes {
   static const String homeView = '/home-view';
-  static const String ordersView = '/orders-view';
-  static const String ordersDetailsView = '/orders-details-view';
   static const String orderDetailsMultiSelectView =
       '/order-details-multi-select-view';
   static const String modalDeleteView = '/modal-delete-view';
@@ -88,13 +90,17 @@ class Routes {
   static const String translationItemView = '/translation-item-view';
   static const String translationModifiresView = '/translation-modifires-view';
   static const String translationSurveyView = '/translation-survey-view';
+  static const String selectTableView = '/select-table-view';
+  static const String ordersView = '/orders-view';
+  static const String ordersDetailsView = '/orders-details-view';
+  static const String payView = '/pay-view';
+  static const String changeOrderView = '/change-order-view';
   static const String registartionView = '/registartion-view';
   static const String tablesView = '/tables-view';
+  static const String itemsOfSectionView = '/items-of-section-view';
   static const String loginView = '/';
   static const all = <String>{
     homeView,
-    ordersView,
-    ordersDetailsView,
     orderDetailsMultiSelectView,
     modalDeleteView,
     modalOrderStatusView,
@@ -125,8 +131,14 @@ class Routes {
     translationItemView,
     translationModifiresView,
     translationSurveyView,
+    selectTableView,
+    ordersView,
+    ordersDetailsView,
+    payView,
+    changeOrderView,
     registartionView,
     tablesView,
+    itemsOfSectionView,
     loginView,
   };
 }
@@ -136,8 +148,6 @@ class StackedRouter extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.homeView, page: HomeView),
-    RouteDef(Routes.ordersView, page: OrdersView),
-    RouteDef(Routes.ordersDetailsView, page: OrdersDetailsView),
     RouteDef(Routes.orderDetailsMultiSelectView,
         page: OrderDetailsMultiSelectView),
     RouteDef(Routes.modalDeleteView, page: ModalDeleteView),
@@ -173,8 +183,14 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.translationItemView, page: TranslationItemView),
     RouteDef(Routes.translationModifiresView, page: TranslationModifiresView),
     RouteDef(Routes.translationSurveyView, page: TranslationSurveyView),
+    RouteDef(Routes.selectTableView, page: SelectTableView),
+    RouteDef(Routes.ordersView, page: OrdersView),
+    RouteDef(Routes.ordersDetailsView, page: OrdersDetailsView),
+    RouteDef(Routes.payView, page: PayView),
+    RouteDef(Routes.changeOrderView, page: ChangeOrderView),
     RouteDef(Routes.registartionView, page: RegistartionView),
     RouteDef(Routes.tablesView, page: TablesView),
+    RouteDef(Routes.itemsOfSectionView, page: ItemsOfSectionView),
     RouteDef(Routes.loginView, page: LoginView),
   ];
   @override
@@ -183,18 +199,6 @@ class StackedRouter extends RouterBase {
     HomeView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const HomeView(),
-        settings: data,
-      );
-    },
-    OrdersView: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => const OrdersView(),
-        settings: data,
-      );
-    },
-    OrdersDetailsView: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => const OrdersDetailsView(),
         settings: data,
       );
     },
@@ -381,6 +385,36 @@ class StackedRouter extends RouterBase {
         settings: data,
       );
     },
+    SelectTableView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const SelectTableView(),
+        settings: data,
+      );
+    },
+    OrdersView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const OrdersView(),
+        settings: data,
+      );
+    },
+    OrdersDetailsView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const OrdersDetailsView(),
+        settings: data,
+      );
+    },
+    PayView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const PayView(),
+        settings: data,
+      );
+    },
+    ChangeOrderView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ChangeOrderView(),
+        settings: data,
+      );
+    },
     RegistartionView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const RegistartionView(),
@@ -390,6 +424,12 @@ class StackedRouter extends RouterBase {
     TablesView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const TablesView(),
+        settings: data,
+      );
+    },
+    ItemsOfSectionView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ItemsOfSectionView(),
         settings: data,
       );
     },
@@ -426,38 +466,6 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       Routes.homeView,
-      id: routerId,
-      preventDuplicates: preventDuplicates,
-      parameters: parameters,
-      transition: transition,
-    );
-  }
-
-  Future<dynamic> navigateToOrdersView({
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  }) async {
-    return navigateTo(
-      Routes.ordersView,
-      id: routerId,
-      preventDuplicates: preventDuplicates,
-      parameters: parameters,
-      transition: transition,
-    );
-  }
-
-  Future<dynamic> navigateToOrdersDetailsView({
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  }) async {
-    return navigateTo(
-      Routes.ordersDetailsView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,
@@ -947,6 +955,86 @@ extension NavigatorStateExtension on NavigationService {
     );
   }
 
+  Future<dynamic> navigateToSelectTableView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.selectTableView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToOrdersView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.ordersView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToOrdersDetailsView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.ordersDetailsView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToPayView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.payView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToChangeOrderView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.changeOrderView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
   Future<dynamic> navigateToRegistartionView({
     int? routerId,
     bool preventDuplicates = true,
@@ -972,6 +1060,22 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       Routes.tablesView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToItemsOfSectionView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.itemsOfSectionView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,

@@ -130,7 +130,6 @@ class StaffListWidget extends StatelessWidget {
                   onTap: () => showSideDialogue(
                     context: context,
                     title: "Edit Staff Member",
-                    cancelButtonText: "Cancel",
                     saveButtonText: "Save",
                     saveButtonPressed: (dynamic val) {
                       // ignore: avoid_print

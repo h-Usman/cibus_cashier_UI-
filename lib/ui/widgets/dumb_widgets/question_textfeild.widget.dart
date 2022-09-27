@@ -22,7 +22,7 @@ class TextFeildWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 3.sp, right: 3.sp, top: 1.5.sp),
+      padding: EdgeInsets.only(right: 3.sp, top: 1.5.sp),
       width: double.infinity,
       child: SizedBox(
         width: double.infinity,
@@ -44,6 +44,8 @@ class TextFeildWidget extends StatelessWidget {
                   //   text: value,
                   // ),
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: ccNeutral0,
                     contentPadding: EdgeInsets.only(left: 2.63.sp),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(1.758.sp),

@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/theme/cibus.colors.dart';
 import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/order_list_item.widget.dart';
-import 'package:flutter_application_1/ui/widgets/dumb_widgets/ordersTabs/orders_tab.widget.dart';
+import 'package:flutter_application_1/ui/widgets/dumb_widgets/question_textfeild.widget.dart';
+import 'package:flutter_application_1/ui/widgets/dumb_widgets/textarea.widget.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../widgets/dumb_widgets/footer.widget.dart';
-import '../../widgets/dumb_widgets/page_title.widget.dart';
 import '../../widgets/dumb_widgets/top_header.widget.dart';
-import '../../widgets/smart_widgets/main_navigation_menu_widget/main_navigation_menu_widget_view.dart';
 import './orders_view_model.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -198,6 +196,7 @@ class OrdersView extends StatelessWidget {
                                                         collapsedIconColor:
                                                             ccDanger300,
                                                         iconColor: ccDanger300,
+                                                        initiallyExpanded: true,
                                                         title: Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -331,10 +330,9 @@ class OrdersView extends StatelessWidget {
                                                                     .center,
                                                             children: [
                                                               Container(
-                                                                height:
-                                                                    11.648.sp,
-                                                                width:
-                                                                    22.41758.sp,
+                                                                // height:
+                                                                //     11.648.sp,
+                                                                // width: 70.1.sp,
                                                                 decoration:
                                                                     BoxDecoration(
                                                                   borderRadius:
@@ -350,32 +348,473 @@ class OrdersView extends StatelessWidget {
                                                                 clipBehavior: Clip
                                                                     .antiAlias,
                                                                 child:
-                                                                    Container(
-                                                                  color:
+                                                                    DropdownButton(
+                                                                  dropdownColor:
                                                                       ccNeutral0,
-                                                                  child:
-                                                                      FloatingActionButton(
-                                                                    onPressed:
-                                                                        () {
-                                                                      // do your thing here
-                                                                    },
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              2.1978.sp),
-                                                                    ),
-                                                                    backgroundColor:
-                                                                        ccNeutral0,
-                                                                    child: SvgPicture
-                                                                        .asset(
-                                                                      "../assets/imges/ellipse.svg",
-                                                                      width: 3.73
-                                                                          .sp,
-                                                                      height:
-                                                                          3.73.sp,
-                                                                    ),
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          2.1978
+                                                                              .sp),
+                                                                  icon:
+                                                                      SvgPicture
+                                                                          .asset(
+                                                                    "../assets/imges/elipse-h.svg",
+                                                                    height:
+                                                                        0.8615
+                                                                            .sp,
                                                                   ),
+                                                                  underline:
+                                                                      Container(
+                                                                    height: 0.0,
+                                                                    color: Colors
+                                                                        .transparent,
+                                                                  ),
+                                                                  elevation: 0,
+                                                                  items: [
+                                                                    DropdownMenuItem(
+                                                                      value:
+                                                                          "Leave Comment",
+                                                                      child:
+                                                                          SizedBox(
+                                                                        width: 35
+                                                                            .sp,
+                                                                        child:
+                                                                            InkWell(
+                                                                          child:
+                                                                              Row(
+                                                                            children: [
+                                                                              Container(
+                                                                                decoration: BoxDecoration(
+                                                                                  borderRadius: BorderRadius.circular(2.1978.sp),
+                                                                                ),
+                                                                                child: Row(
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      "Leave Comment",
+                                                                                      style: GoogleFonts.sen(
+                                                                                        color: ccNutural550,
+                                                                                        fontSize: 4.3956.sp,
+                                                                                        fontWeight: FontWeight.w400,
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            ],
+                                                                          ),
+                                                                          onTap:
+                                                                              () {
+                                                                            Navigator.pop(context);
+                                                                            showDialog(
+                                                                              context: context,
+                                                                              barrierDismissible: false,
+                                                                              builder: (_) => AlertDialog(
+                                                                                contentPadding: EdgeInsets.zero,
+                                                                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2.197.sp))),
+                                                                                content: Container(
+                                                                                  width: 183.076.sp,
+                                                                                  height: 57.sp,
+                                                                                  decoration: const BoxDecoration(
+                                                                                      border: Border(
+                                                                                          bottom: BorderSide(
+                                                                                    width: 0.5,
+                                                                                    color: ccNatural250,
+                                                                                  ))),
+                                                                                  child: Column(
+                                                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                    children: [
+                                                                                      Container(
+                                                                                        padding: EdgeInsets.only(
+                                                                                          left: 3.sp,
+                                                                                          right: 1.sp,
+                                                                                          top: 2.sp,
+                                                                                        ),
+                                                                                        decoration: const BoxDecoration(
+                                                                                            border: Border(
+                                                                                                bottom: BorderSide(
+                                                                                          width: 0.5,
+                                                                                          color: ccNatural250,
+                                                                                        ))),
+                                                                                        height: 14.62.sp,
+                                                                                        child: Row(
+                                                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                          children: [
+                                                                                            Expanded(
+                                                                                              child: Container(
+                                                                                                height: 10.62.sp,
+                                                                                                color: ccNeutral0,
+                                                                                                alignment: Alignment.centerLeft,
+                                                                                                child: Row(
+                                                                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                  children: [
+                                                                                                    SizedBox(
+                                                                                                      width: 153.sp,
+                                                                                                      child: Row(
+                                                                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                        children: [
+                                                                                                          Text(
+                                                                                                            'Receipt Comment',
+                                                                                                            style: GoogleFonts.sen(
+                                                                                                              color: ccNutural550,
+                                                                                                              fontSize: 5.714.sp,
+                                                                                                            ),
+                                                                                                          ),
+                                                                                                        ],
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  ],
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                            SizedBox(
+                                                                                              height: 10.62.sp,
+                                                                                              width: 10.sp,
+                                                                                              child: ElevatedButton(
+                                                                                                onPressed: () {
+                                                                                                  Navigator.pop(context);
+                                                                                                },
+                                                                                                style: ElevatedButton.styleFrom(
+                                                                                                  backgroundColor: ccNeutral0,
+                                                                                                  elevation: 0,
+                                                                                                  shadowColor: Colors.transparent,
+                                                                                                ),
+                                                                                                child: SvgPicture.asset(
+                                                                                                  "../assets/imges/close.svg",
+                                                                                                  height: 4.615.sp,
+                                                                                                  width: 4.615.sp,
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                      ),
+                                                                                      Container(
+                                                                                        color: ccDanger100,
+                                                                                        padding: EdgeInsets.only(
+                                                                                          left: 5.sp,
+                                                                                          right: 1.sp,
+                                                                                        ),
+                                                                                        child: Column(
+                                                                                          mainAxisAlignment: MainAxisAlignment.start,
+                                                                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                          children: [
+                                                                                            TextAreaWidget(
+                                                                                              hint: 'Enter your cpmment here...',
+                                                                                              lebel: '',
+                                                                                            ),
+                                                                                            csvertSpace4,
+                                                                                          ],
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
+                                                                                ),
+                                                                                actions: [
+                                                                                  Row(
+                                                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                    children: [
+                                                                                      Padding(
+                                                                                          padding: EdgeInsets.only(
+                                                                                        left: 5.sp,
+                                                                                      )),
+                                                                                      Container(
+                                                                                        height: 9.25.sp,
+                                                                                        width: 29.23.sp,
+                                                                                        margin: EdgeInsets.only(
+                                                                                          bottom: 4.39.sp,
+                                                                                        ),
+                                                                                        // color: Colors.green,
+                                                                                        decoration: BoxDecoration(
+                                                                                          borderRadius: BorderRadius.circular(1.098.sp),
+                                                                                          border: Border.all(color: ccDanger300),
+                                                                                        ),
+                                                                                        child: ElevatedButton.icon(
+                                                                                          onPressed: () {
+                                                                                            Navigator.pop(context);
+                                                                                          },
+                                                                                          style: ElevatedButton.styleFrom(
+                                                                                            backgroundColor: ccDanger300,
+                                                                                            elevation: 0,
+                                                                                            shadowColor: Colors.transparent,
+                                                                                          ),
+                                                                                          icon: SvgPicture.asset(
+                                                                                            "../assets/imges/check-white.svg",
+                                                                                            width: 4.17.sp,
+                                                                                            height: 3.07.sp,
+                                                                                          ),
+                                                                                          label: Text(
+                                                                                            'Save',
+                                                                                            style: GoogleFonts.sen(
+                                                                                              color: ccNeutral0,
+                                                                                              fontSize: 4.39.sp,
+                                                                                              fontWeight: FontWeight.w400,
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                            );
+                                                                          },
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    DropdownMenuItem(
+                                                                      value:
+                                                                          "Change Table",
+                                                                      child:
+                                                                          Row(
+                                                                        children: [
+                                                                          Text(
+                                                                            "Change Table",
+                                                                            style:
+                                                                                GoogleFonts.sen(
+                                                                              color: ccNutural550,
+                                                                              fontSize: 4.3956.sp,
+                                                                              fontWeight: FontWeight.w400,
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                    DropdownMenuItem(
+                                                                      value:
+                                                                          "Change Order Type",
+                                                                      child:
+                                                                          InkWell(
+                                                                        child:
+                                                                            Row(
+                                                                          children: [
+                                                                            Text(
+                                                                              "Change Order Type",
+                                                                              style: GoogleFonts.sen(
+                                                                                color: ccNutural550,
+                                                                                fontSize: 4.3956.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                        onTap:
+                                                                            () {
+                                                                          model.goToPage(
+                                                                              'change_order');
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                    DropdownMenuItem(
+                                                                      value:
+                                                                          "Clear Order",
+                                                                      child:
+                                                                          InkWell(
+                                                                        child:
+                                                                            Row(
+                                                                          children: [
+                                                                            Text(
+                                                                              "Clear Order",
+                                                                              style: GoogleFonts.sen(
+                                                                                color: ccNutural550,
+                                                                                fontSize: 4.3956.sp,
+                                                                                fontWeight: FontWeight.w400,
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                        onTap:
+                                                                            () {
+                                                                          Navigator.pop(
+                                                                              context);
+                                                                          showDialog(
+                                                                            context:
+                                                                                context,
+                                                                            barrierDismissible:
+                                                                                false,
+                                                                            builder: (_) =>
+                                                                                AlertDialog(
+                                                                              contentPadding: EdgeInsets.zero,
+                                                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2.197.sp))),
+                                                                              content: Container(
+                                                                                width: 183.076.sp,
+                                                                                height: 32.2.sp,
+                                                                                decoration: const BoxDecoration(
+                                                                                    border: Border(
+                                                                                        bottom: BorderSide(
+                                                                                  width: 0.5,
+                                                                                  color: ccNatural250,
+                                                                                ))),
+                                                                                child: Column(
+                                                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                  children: [
+                                                                                    Container(
+                                                                                      padding: EdgeInsets.only(
+                                                                                        left: 3.sp,
+                                                                                        right: 1.sp,
+                                                                                        top: 2.sp,
+                                                                                      ),
+                                                                                      decoration: const BoxDecoration(
+                                                                                          border: Border(
+                                                                                              bottom: BorderSide(
+                                                                                        width: 0.5,
+                                                                                        color: ccNatural250,
+                                                                                      ))),
+                                                                                      height: 14.62.sp,
+                                                                                      child: Row(
+                                                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                        children: [
+                                                                                          Expanded(
+                                                                                            child: Container(
+                                                                                              height: 10.62.sp,
+                                                                                              color: ccNeutral0,
+                                                                                              alignment: Alignment.centerLeft,
+                                                                                              child: Row(
+                                                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                children: [
+                                                                                                  SizedBox(
+                                                                                                    width: 153.sp,
+                                                                                                    child: Row(
+                                                                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                      children: [
+                                                                                                        Text(
+                                                                                                          'Enter Admin Password',
+                                                                                                          style: GoogleFonts.sen(
+                                                                                                            color: ccNutural550,
+                                                                                                            fontSize: 5.714.sp,
+                                                                                                          ),
+                                                                                                        ),
+                                                                                                      ],
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                ],
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+                                                                                          SizedBox(
+                                                                                            height: 10.62.sp,
+                                                                                            width: 10.sp,
+                                                                                            child: ElevatedButton(
+                                                                                              onPressed: () {
+                                                                                                Navigator.pop(context);
+                                                                                              },
+                                                                                              style: ElevatedButton.styleFrom(
+                                                                                                backgroundColor: ccNeutral0,
+                                                                                                elevation: 0,
+                                                                                                shadowColor: Colors.transparent,
+                                                                                              ),
+                                                                                              child: SvgPicture.asset(
+                                                                                                "../assets/imges/close.svg",
+                                                                                                height: 4.615.sp,
+                                                                                                width: 4.615.sp,
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                    Container(
+                                                                                      color: ccDanger100,
+                                                                                      padding: EdgeInsets.only(
+                                                                                        left: 5.sp,
+                                                                                        right: 1.sp,
+                                                                                      ),
+                                                                                      child: Column(
+                                                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                        children: [
+                                                                                          csvertSpace3,
+                                                                                          TextFeildWidget(
+                                                                                            hint: 'Enter your password',
+                                                                                          ),
+                                                                                          csvertSpace4,
+                                                                                        ],
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                              actions: [
+                                                                                Row(
+                                                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                  children: [
+                                                                                    Padding(
+                                                                                        padding: EdgeInsets.only(
+                                                                                      left: 5.sp,
+                                                                                    )),
+                                                                                    Container(
+                                                                                      height: 9.25.sp,
+                                                                                      width: 29.23.sp,
+                                                                                      margin: EdgeInsets.only(
+                                                                                        bottom: 4.39.sp,
+                                                                                      ),
+                                                                                      // color: Colors.green,
+                                                                                      decoration: BoxDecoration(
+                                                                                        borderRadius: BorderRadius.circular(1.098.sp),
+                                                                                        border: Border.all(color: ccDanger300),
+                                                                                      ),
+                                                                                      child: ElevatedButton.icon(
+                                                                                        onPressed: () {
+                                                                                          Navigator.pop(context);
+                                                                                        },
+                                                                                        style: ElevatedButton.styleFrom(
+                                                                                          backgroundColor: ccDanger300,
+                                                                                          elevation: 0,
+                                                                                          shadowColor: Colors.transparent,
+                                                                                        ),
+                                                                                        icon: SvgPicture.asset(
+                                                                                          "../assets/imges/check-white.svg",
+                                                                                          width: 4.17.sp,
+                                                                                          height: 3.07.sp,
+                                                                                        ),
+                                                                                        label: Text(
+                                                                                          'Confirm',
+                                                                                          style: GoogleFonts.sen(
+                                                                                            color: ccNeutral0,
+                                                                                            fontSize: 4.39.sp,
+                                                                                            fontWeight: FontWeight.w400,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                          );
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                    DropdownMenuItem(
+                                                                      value:
+                                                                          "Merge Order",
+                                                                      child:
+                                                                          Row(
+                                                                        children: [
+                                                                          Text(
+                                                                            "Merge Order",
+                                                                            style:
+                                                                                GoogleFonts.sen(
+                                                                              color: ccNutural550,
+                                                                              fontSize: 4.3956.sp,
+                                                                              fontWeight: FontWeight.w400,
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                  onChanged:
+                                                                      (value) {},
                                                                 ),
                                                               ),
                                                               cshorzSpace5,
@@ -447,7 +886,10 @@ class OrdersView extends StatelessWidget {
                                                                               .sp),
                                                                 ),
                                                               ),
-                                                              onPressed: () {},
+                                                              onPressed: () {
+                                                                model.goToPage(
+                                                                    'pay');
+                                                              },
                                                               child: Text(
                                                                 'Pay',
                                                                 style: TextStyle(
@@ -548,82 +990,117 @@ class OrdersView extends StatelessWidget {
                                                   spacing: 4.sp,
                                                   runSpacing: 4.sp,
                                                   children: [
-                                                    Container(
-                                                      width: 42.857.sp,
-                                                      height: 38.681.sp,
-                                                      decoration: BoxDecoration(
-                                                        // color: ccSuccess800,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(
-                                                                    2.2.sp),
-                                                        border: Border.all(
-                                                          width: 0.5,
-                                                          color: ccNutural550,
-                                                        ),
-                                                      ),
-                                                      child: Column(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Image.asset(
-                                                            "../assets/imges/sect.png",
-                                                            width: 42.857.sp,
-                                                            height: 30.549.sp,
+                                                    InkWell(
+                                                      child: Container(
+                                                        width: 31.42857.sp,
+                                                        height: 32.967.sp,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      2.2.sp),
+                                                          border: Border.all(
+                                                            width: 0.5,
+                                                            color: ccNutural550,
                                                           ),
-                                                          Container(
-                                                            height: 7.50.sp,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: ccNeutral0,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .only(
-                                                                bottomRight: Radius
-                                                                    .circular(
-                                                                        2.2.sp),
-                                                                bottomLeft: Radius
-                                                                    .circular(
-                                                                        2.2.sp),
+                                                        ),
+                                                        child: Column(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Container(
+                                                              width: 42.857.sp,
+                                                              height:
+                                                                  23.51648.sp,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color:
+                                                                    ccNeutral0,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .only(
+                                                                  topRight: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                  topLeft: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                ),
+                                                              ),
+                                                              clipBehavior: Clip
+                                                                  .antiAlias,
+                                                              child:
+                                                                  Image.asset(
+                                                                "../assets/imges/sect.png",
+                                                                width:
+                                                                    31.42857.sp,
+                                                                height:
+                                                                    23.51648.sp,
                                                               ),
                                                             ),
-                                                            child: Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                cshorzSpace2,
-                                                                Text(
-                                                                  "Starters",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .sen(
-                                                                    color:
-                                                                        ccDanger300,
-                                                                    fontSize:
-                                                                        3.5164
-                                                                            .sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                  ),
-                                                                )
-                                                              ],
+                                                            Container(
+                                                              height:
+                                                                  9.100549.sp,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color:
+                                                                    ccNeutral0,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .only(
+                                                                  bottomRight: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                  bottomLeft: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                ),
+                                                              ),
+                                                              clipBehavior: Clip
+                                                                  .antiAlias,
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  cshorzSpace2,
+                                                                  Text(
+                                                                    "Starters",
+                                                                    style:
+                                                                        GoogleFonts
+                                                                            .sen(
+                                                                      color:
+                                                                          ccDanger300,
+                                                                      fontSize:
+                                                                          3.5164
+                                                                              .sp,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w400,
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
+                                                      onTap: () {
+                                                        model.goToPage(
+                                                            'items_of_section');
+                                                      },
                                                     ),
                                                     Container(
-                                                      width: 42.857.sp,
-                                                      height: 38.681.sp,
+                                                      width: 31.42857.sp,
+                                                      height: 32.967.sp,
                                                       decoration: BoxDecoration(
                                                         // color: ccSuccess800,
                                                         borderRadius:
@@ -644,7 +1121,8 @@ class OrdersView extends StatelessWidget {
                                                                 .start,
                                                         children: [
                                                           Container(
-                                                            height: 30.549.sp,
+                                                            width: 42.857.sp,
+                                                            height: 23.51648.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color:
@@ -679,7 +1157,7 @@ class OrdersView extends StatelessWidget {
                                                             ),
                                                           ),
                                                           Container(
-                                                            height: 7.50.sp,
+                                                            height: 9.100549.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: ccNeutral0,
@@ -725,8 +1203,8 @@ class OrdersView extends StatelessWidget {
                                                       ),
                                                     ),
                                                     Container(
-                                                      width: 42.857.sp,
-                                                      height: 38.681.sp,
+                                                      width: 31.42857.sp,
+                                                      height: 32.967.sp,
                                                       decoration: BoxDecoration(
                                                         // color: ccSuccess800,
                                                         borderRadius:
@@ -747,7 +1225,8 @@ class OrdersView extends StatelessWidget {
                                                                 .start,
                                                         children: [
                                                           Container(
-                                                            height: 30.549.sp,
+                                                            width: 42.857.sp,
+                                                            height: 23.51648.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color:
@@ -782,7 +1261,7 @@ class OrdersView extends StatelessWidget {
                                                             ),
                                                           ),
                                                           Container(
-                                                            height: 7.50.sp,
+                                                            height: 9.100549.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: ccNeutral0,
@@ -828,8 +1307,8 @@ class OrdersView extends StatelessWidget {
                                                       ),
                                                     ),
                                                     Container(
-                                                      width: 42.857.sp,
-                                                      height: 38.681.sp,
+                                                      width: 31.42857.sp,
+                                                      height: 32.967.sp,
                                                       decoration: BoxDecoration(
                                                         // color: ccSuccess800,
                                                         borderRadius:
@@ -850,7 +1329,8 @@ class OrdersView extends StatelessWidget {
                                                                 .start,
                                                         children: [
                                                           Container(
-                                                            height: 30.549.sp,
+                                                            width: 42.857.sp,
+                                                            height: 23.51648.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color:
@@ -885,7 +1365,7 @@ class OrdersView extends StatelessWidget {
                                                             ),
                                                           ),
                                                           Container(
-                                                            height: 7.50.sp,
+                                                            height: 9.100549.sp,
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: ccNeutral0,
