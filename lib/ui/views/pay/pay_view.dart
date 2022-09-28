@@ -1636,13 +1636,28 @@ class PayView extends StatelessWidget {
                                                           Container(
                                                             height: 16.483.sp,
                                                             decoration:
-                                                                const BoxDecoration(
-                                                                    border: Border(
-                                                                        bottom: BorderSide(
-                                                              width: 1,
-                                                              color:
-                                                                  ccPrimary300,
-                                                            ))),
+                                                                BoxDecoration(
+                                                                    borderRadius:
+                                                                        BorderRadius
+                                                                            .only(
+                                                                      topLeft:
+                                                                          Radius
+                                                                              .circular(
+                                                                        2.2.sp,
+                                                                      ),
+                                                                      topRight:
+                                                                          Radius
+                                                                              .circular(
+                                                                        2.2.sp,
+                                                                      ),
+                                                                    ),
+                                                                    border:
+                                                                        Border
+                                                                            .all(
+                                                                      width: 1,
+                                                                      color:
+                                                                          ccDanger300,
+                                                                    )),
                                                             padding:
                                                                 EdgeInsets.only(
                                                                     left: 3.sp,

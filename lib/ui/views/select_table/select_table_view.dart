@@ -81,7 +81,7 @@ class SelectTableView extends StatelessWidget {
                                                     Radius.circular(2.197.sp))),
                                             content: Container(
                                               width: 183.076.sp,
-                                              height: 30.sp,
+                                              height: 29.10.sp,
                                               decoration: const BoxDecoration(
                                                   border: Border(
                                                       bottom: BorderSide(
@@ -275,10 +275,6 @@ class SelectTableView extends StatelessWidget {
                                                   Container(
                                                     height: 9.25.sp,
                                                     width: 29.23.sp,
-                                                    margin: EdgeInsets.only(
-                                                      bottom: 4.39.sp,
-                                                    ),
-                                                    // color: Colors.green,
                                                     decoration: BoxDecoration(
                                                       borderRadius:
                                                           BorderRadius.circular(

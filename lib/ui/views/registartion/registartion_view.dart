@@ -435,7 +435,7 @@ class RegistartionView extends StatelessWidget {
                                                                     2.197.sp))),
                                                     content: Container(
                                                       width: 183.076.sp,
-                                                      height: 57.sp,
+                                                      height: 58.20.sp,
                                                       decoration:
                                                           const BoxDecoration(
                                                               border: Border(
@@ -1301,11 +1301,6 @@ class RegistartionView extends StatelessWidget {
                                                           Container(
                                                             height: 9.25.sp,
                                                             width: 29.23.sp,
-                                                            margin:
-                                                                EdgeInsets.only(
-                                                              bottom: 4.39.sp,
-                                                            ),
-                                                            // color: Colors.green,
                                                             decoration:
                                                                 BoxDecoration(
                                                               borderRadius:
@@ -1419,7 +1414,7 @@ class RegistartionView extends StatelessWidget {
                                                 child: SvgPicture.asset(
                                                   "../assets/imges/erase.svg",
                                                   height: 4.1538.sp,
-                                                          width: 7.89.sp,
+                                                  width: 7.89.sp,
                                                 ),
                                               )),
                                         ],

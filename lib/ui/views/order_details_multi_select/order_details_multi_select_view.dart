@@ -510,7 +510,7 @@ class OrderDetailsMultiSelectView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const TopHeaderWidget(),
+                          TopHeaderWidget(),
                           SizedBox(
                             height: 100.h,
                             // color: ccNeutral0 Color(0xFFFFFFFF),

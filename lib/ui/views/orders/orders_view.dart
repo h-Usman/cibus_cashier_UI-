@@ -413,7 +413,7 @@ class OrdersView extends StatelessWidget {
                                                                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2.197.sp))),
                                                                                 content: Container(
                                                                                   width: 183.076.sp,
-                                                                                  height: 57.sp,
+                                                                                  height: 55.50.sp,
                                                                                   decoration: const BoxDecoration(
                                                                                       border: Border(
                                                                                           bottom: BorderSide(
@@ -428,7 +428,7 @@ class OrdersView extends StatelessWidget {
                                                                                         padding: EdgeInsets.only(
                                                                                           left: 3.sp,
                                                                                           right: 1.sp,
-                                                                                          top: 2.sp,
+                                                                                          // top: 2.sp,
                                                                                         ),
                                                                                         decoration: const BoxDecoration(
                                                                                             border: Border(
@@ -525,10 +525,6 @@ class OrdersView extends StatelessWidget {
                                                                                       Container(
                                                                                         height: 9.25.sp,
                                                                                         width: 29.23.sp,
-                                                                                        margin: EdgeInsets.only(
-                                                                                          bottom: 4.39.sp,
-                                                                                        ),
-                                                                                        // color: Colors.green,
                                                                                         decoration: BoxDecoration(
                                                                                           borderRadius: BorderRadius.circular(1.098.sp),
                                                                                           border: Border.all(color: ccDanger300),
@@ -642,7 +638,7 @@ class OrdersView extends StatelessWidget {
                                                                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2.197.sp))),
                                                                               content: Container(
                                                                                 width: 183.076.sp,
-                                                                                height: 32.2.sp,
+                                                                                height: 33.50.sp,
                                                                                 decoration: const BoxDecoration(
                                                                                     border: Border(
                                                                                         bottom: BorderSide(
@@ -754,10 +750,6 @@ class OrdersView extends StatelessWidget {
                                                                                     Container(
                                                                                       height: 9.25.sp,
                                                                                       width: 29.23.sp,
-                                                                                      margin: EdgeInsets.only(
-                                                                                        bottom: 4.39.sp,
-                                                                                      ),
-                                                                                      // color: Colors.green,
                                                                                       decoration: BoxDecoration(
                                                                                         borderRadius: BorderRadius.circular(1.098.sp),
                                                                                         border: Border.all(color: ccDanger300),

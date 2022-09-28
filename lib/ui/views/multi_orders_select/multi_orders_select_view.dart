@@ -495,7 +495,7 @@ class MultiOrdersSelectView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const TopHeaderWidget(),
+                          TopHeaderWidget(),
                           Container(
                             padding:
                                 const EdgeInsets.only(left: 15.0, right: 15.0),
