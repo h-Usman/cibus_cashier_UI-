@@ -52,10 +52,10 @@ showSideDialogue({
                     Align(
                       alignment: Alignment.topCenter,
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(2.sp, 2.sp, 4.sp, 2.sp),
+                        padding: EdgeInsets.fromLTRB(2.sp, 5.sp, 4.sp, 2.sp),
                         child: Row(
                           children: [
-                            cshorzSpace8,
+                            cshorzSpace2,
                             Text(
                               title,
                               style: ctsHeading4.copyWith(
