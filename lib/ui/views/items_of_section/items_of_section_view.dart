@@ -802,14 +802,14 @@ class ItemsOfSectionView extends StatelessWidget {
                                                                                       children: [
                                                                                         Padding(
                                                                                             padding: EdgeInsets.only(
-                                                                                          left: 5.sp,
+                                                                                          left: 3.sp,
                                                                                         )),
                                                                                         Container(
                                                                                           height: 9.25.sp,
                                                                                           width: 29.23.sp,
-                                                                                          margin: EdgeInsets.only(
-                                                                                            bottom: 4.39.sp,
-                                                                                          ),
+                                                                                          // margin: EdgeInsets.only(
+                                                                                          //   bottom: 4.39.sp,
+                                                                                          // ),
                                                                                           // color: Colors.green,
                                                                                           decoration: BoxDecoration(
                                                                                             borderRadius: BorderRadius.circular(1.098.sp),

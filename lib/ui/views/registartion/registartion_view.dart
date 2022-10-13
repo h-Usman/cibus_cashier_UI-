@@ -1296,7 +1296,8 @@ class RegistartionView extends StatelessWidget {
                                                               padding:
                                                                   EdgeInsets
                                                                       .only(
-                                                            left: 5.sp,
+                                                            left: 3.sp,
+                                                            // bottom:2.sp,
                                                           )),
                                                           Container(
                                                             height: 9.25.sp,
