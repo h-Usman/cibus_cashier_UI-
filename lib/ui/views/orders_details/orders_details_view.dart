@@ -3,9 +3,7 @@ import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/footer.widget.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/order_details_list.widget.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/ordersTabs/orders_tab.widget.dart';
-import 'package:flutter_application_1/ui/widgets/dumb_widgets/show_side_dialogue.widget.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 
@@ -168,439 +166,9 @@ class OrdersDetailsView extends StatelessWidget {
                                                       ),
                                                     ],
                                                   ),
-                                                  onTap: () => showSideDialogue(
-                                                    context: context,
-                                                    title: "Add Section",
-                                                    saveButtonText: "Save",
-                                                    saveButtonPressed:
-                                                        (dynamic val) {
-                                                      // print(
-                                                      //     "hello i am clicked with $val");
-                                                      Navigator.pop(context);
-                                                    },
-                                                    child: Container(
-                                                      height: 100.h - 110,
-                                                      // width: 100.w,
-                                                      padding: EdgeInsets.only(
-                                                          top: 4.sp,
-                                                          left: 3.50.sp,
-                                                          right: 4.sp),
-                                                      decoration: BoxDecoration(
-                                                        border: Border(
-                                                          bottom: BorderSide(
-                                                            color: ccNutural550,
-                                                            width: 1,
-                                                          ),
-                                                          top: BorderSide(
-                                                            color: ccNutural550,
-                                                            width: 1,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      child:
-                                                          SingleChildScrollView(
-                                                        child: Column(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            csvertSpace2,
-                                                            SizedBox(
-                                                                height:
-                                                                    100.h - 200,
-                                                                width: 100.w,
-                                                                child:
-                                                                    SingleChildScrollView(
-                                                                        child: Column(
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                                                            children: [
-                                                                      csvertSpace4,
-                                                                      csvertSpace4,
-                                                                      Column(
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.start,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.start,
-                                                                        children: [
-                                                                          Row(
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            crossAxisAlignment:
-                                                                                CrossAxisAlignment.center,
-                                                                            children: [
-                                                                              Text(
-                                                                                "Note ",
-                                                                                style: GoogleFonts.sen(
-                                                                                  fontSize: 4.395.sp,
-                                                                                  fontWeight: FontWeight.w400,
-                                                                                  color: ccDanger300,
-                                                                                ),
-                                                                              ),
-                                                                              Tooltip(
-                                                                                message: 'Section note to display at the bottom of the menu',
-                                                                                textStyle: TextStyle(
-                                                                                  color: ccNeutral0,
-                                                                                ),
-                                                                                child: SvgPicture.asset(
-                                                                                  "../assets/imges/warning.svg",
-                                                                                  width: 2.417.sp,
-                                                                                  height: 2.417.sp,
-                                                                                ),
-                                                                              ),
-                                                                              cshorzSpace16,
-                                                                            ],
-                                                                          ),
-                                                                          Padding(
-                                                                              padding: EdgeInsets.only(bottom: 3.95.sp)),
-                                                                          SizedBox(
-                                                                            width:
-                                                                                95.w,
-                                                                            height:
-                                                                                8.791.sp,
-                                                                            child:
-                                                                                Padding(
-                                                                              padding: EdgeInsets.symmetric(
-                                                                                  // horizontal: 5.054.sp,
-                                                                                  horizontal: 0,
-                                                                                  vertical: 0),
-                                                                              child: TextField(
-                                                                                style: TextStyle(color: ccNutural550, fontSize: 3.956.sp),
-                                                                                // controller: TextEditingController(
-                                                                                //   text: value,
-                                                                                // ),
-                                                                                decoration: InputDecoration(
-                                                                                  contentPadding: EdgeInsets.only(left: 2.63.sp),
-                                                                                  border: OutlineInputBorder(
-                                                                                      borderRadius: BorderRadius.circular(1.758.sp),
-                                                                                      borderSide: BorderSide(
-                                                                                        color: ccPrimary300,
-                                                                                        width: 0.2197.sp,
-                                                                                      )),
-                                                                                  hintText: 'e.g. 10% Service Charge Included',
-                                                                                  hintStyle: TextStyle(
-                                                                                    color: ccPrimary300,
-                                                                                    fontSize: 3.956.sp,
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                          Padding(
-                                                                              padding: EdgeInsets.only(bottom: 1.95.sp)),
-                                                                        ],
-                                                                      ),
-                                                                      csvertSpace4,
-                                                                      Column(
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.start,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.start,
-                                                                        children: [
-                                                                          Row(
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            crossAxisAlignment:
-                                                                                CrossAxisAlignment.center,
-                                                                            children: [
-                                                                              Text(
-                                                                                "Image",
-                                                                                style: GoogleFonts.sen(
-                                                                                  fontSize: 4.395.sp,
-                                                                                  fontWeight: FontWeight.w400,
-                                                                                  color: ccDanger300,
-                                                                                ),
-                                                                              ),
-                                                                              cshorzSpace16,
-                                                                            ],
-                                                                          ),
-                                                                          Padding(
-                                                                              padding: EdgeInsets.only(bottom: 3.95.sp)),
-                                                                          Container(
-                                                                            width:
-                                                                                42.857.sp,
-                                                                            height:
-                                                                                38.681.sp,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              // color: ccSuccess800,
-                                                                              borderRadius: BorderRadius.circular(2.2.sp),
-                                                                              border: Border.all(
-                                                                                width: 0.5,
-                                                                                color: ccNutural550,
-                                                                              ),
-                                                                            ),
-                                                                            child:
-                                                                                Column(
-                                                                              mainAxisAlignment: MainAxisAlignment.start,
-                                                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                                                              children: [
-                                                                                Image.asset(
-                                                                                  "../assets/imges/sect.png",
-                                                                                  width: 42.857.sp,
-                                                                                  height: 30.549.sp,
-                                                                                ),
-                                                                                // Text('ALLAH HOO'),
-                                                                                // cshorzSpace16,
-                                                                                SizedBox(
-                                                                                  height: 7.50.sp,
-                                                                                  child: Row(
-                                                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                    children: [
-                                                                                      InkWell(
-                                                                                          child: Tooltip(
-                                                                                            message: 'Delete image',
-                                                                                            textStyle: TextStyle(
-                                                                                              color: ccNeutral0,
-                                                                                            ),
-                                                                                            child: SvgPicture.asset(
-                                                                                              "../assets/imges/delete.svg",
-                                                                                              width: 3.0760.sp,
-                                                                                              height: 4.sp,
-                                                                                            ),
-                                                                                          ),
-                                                                                          onTap: () => showDialog(
-                                                                                                context: context,
-                                                                                                builder: (_) => AlertDialog(
-                                                                                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2.197.sp))),
-                                                                                                  content: Container(
-                                                                                                    // color: Colors.white,
-                                                                                                    width: 183.076.sp,
-                                                                                                    height: 78.68.sp,
-                                                                                                    decoration: const BoxDecoration(
-                                                                                                        border: Border(
-                                                                                                            bottom: BorderSide(
-                                                                                                      width: 0.5,
-                                                                                                      color: ccNatural250,
-                                                                                                    ))),
-                                                                                                    child: SizedBox(
-                                                                                                      child: Column(
-                                                                                                        mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                                        children: [
-                                                                                                          Container(
-                                                                                                            decoration: const BoxDecoration(
-                                                                                                                border: Border(
-                                                                                                                    bottom: BorderSide(
-                                                                                                              width: 0.5,
-                                                                                                              color: ccNatural250,
-                                                                                                            ))),
-                                                                                                            height: 14.62.sp,
-                                                                                                            child: Row(
-                                                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                                              children: [
-                                                                                                                Expanded(
-                                                                                                                  child: Container(
-                                                                                                                    height: 10.62.sp,
-                                                                                                                    alignment: Alignment.centerLeft,
-                                                                                                                    child: Row(
-                                                                                                                      mainAxisAlignment: MainAxisAlignment.start,
-                                                                                                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                                                      children: [
-                                                                                                                        SizedBox(
-                                                                                                                          // color: Colors.red,
-                                                                                                                          child: SvgPicture.asset(
-                                                                                                                            "../assets/imges/warning-icon.svg",
-                                                                                                                            height: 6.153.sp,
-                                                                                                                            width: 6.153.sp,
-                                                                                                                          ),
-                                                                                                                        ),
-                                                                                                                        Padding(
-                                                                                                                            padding: EdgeInsets.only(
-                                                                                                                          left: 4.175.sp,
-                                                                                                                        )),
-                                                                                                                        Text(
-                                                                                                                          'Are You Sure?',
-                                                                                                                          style: GoogleFonts.sen(
-                                                                                                                            color: ccDanger300,
-                                                                                                                            fontSize: 5.714.sp,
-                                                                                                                          ),
-                                                                                                                        ),
-                                                                                                                      ],
-                                                                                                                    ),
-                                                                                                                  ),
-                                                                                                                ),
-                                                                                                                SizedBox(
-                                                                                                                  height: 10.62.sp,
-                                                                                                                  width: 10.sp,
-                                                                                                                  child: ElevatedButton(
-                                                                                                                    onPressed: () {
-                                                                                                                      Navigator.pop(context);
-                                                                                                                    },
-                                                                                                                    style: ElevatedButton.styleFrom(
-                                                                                                                      backgroundColor: ccNeutral0,
-                                                                                                                      elevation: 0,
-                                                                                                                      shadowColor: Colors.transparent,
-                                                                                                                    ),
-                                                                                                                    child: SvgPicture.asset(
-                                                                                                                      "../assets/imges/close.svg",
-                                                                                                                      height: 4.615.sp,
-                                                                                                                      width: 4.615.sp,
-                                                                                                                    ),
-                                                                                                                  ),
-                                                                                                                ),
-                                                                                                              ],
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                          Padding(
-                                                                                                            padding: EdgeInsets.only(top: 4.83.sp),
-                                                                                                          ),
-                                                                                                          // SizedBox
-                                                                                                          Text(
-                                                                                                            'Do you want to Delete this Picture',
-                                                                                                            style: GoogleFonts.sen(
-                                                                                                              color: ccNutural550,
-                                                                                                              fontSize: 4.395.sp,
-                                                                                                            ),
-                                                                                                          ),
-                                                                                                        ],
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                  actions: [
-                                                                                                    Container(
-                                                                                                      height: 7.25.sp,
-                                                                                                      width: 29.23.sp,
-                                                                                                      margin: EdgeInsets.only(
-                                                                                                        bottom: 4.39.sp,
-                                                                                                      ),
-                                                                                                      // color: Colors.green,
-                                                                                                      decoration: BoxDecoration(
-                                                                                                        borderRadius: BorderRadius.circular(1.098.sp),
-                                                                                                        border: Border.all(color: ccNutural550),
-                                                                                                      ),
-                                                                                                      child: ElevatedButton.icon(
-                                                                                                        onPressed: () {
-                                                                                                          Navigator.pop(context);
-                                                                                                        },
-                                                                                                        style: ElevatedButton.styleFrom(
-                                                                                                          backgroundColor: ccNeutral0, // foreground
-                                                                                                        ),
-                                                                                                        icon: SvgPicture.asset(
-                                                                                                          "../assets/imges/close.svg",
-                                                                                                          width: 2.85.sp,
-                                                                                                          height: 2.85.sp,
-                                                                                                        ),
-                                                                                                        label: Text(
-                                                                                                          'NO',
-                                                                                                          style: GoogleFonts.sen(
-                                                                                                            color: ccNutural550,
-                                                                                                            fontSize: 4.39.sp,
-                                                                                                            fontWeight: FontWeight.w400,
-                                                                                                          ),
-                                                                                                        ), // <-- Text
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                    Padding(
-                                                                                                        padding: EdgeInsets.only(
-                                                                                                      left: 7.25.sp,
-                                                                                                    )),
-                                                                                                    Container(
-                                                                                                      height: 7.25.sp,
-                                                                                                      width: 29.23.sp,
-                                                                                                      margin: EdgeInsets.only(
-                                                                                                        bottom: 4.39.sp,
-                                                                                                      ),
-                                                                                                      // color: Colors.green,
-                                                                                                      decoration: BoxDecoration(
-                                                                                                        borderRadius: BorderRadius.circular(1.098.sp),
-                                                                                                        border: Border.all(color: ccDanger300),
-                                                                                                      ),
-                                                                                                      child: ElevatedButton.icon(
-                                                                                                        onPressed: () => {
-                                                                                                          Navigator.pop(context),
-                                                                                                        },
-                                                                                                        style: ElevatedButton.styleFrom(
-                                                                                                          backgroundColor: ccDanger300,
-                                                                                                          elevation: 0,
-                                                                                                          shadowColor: Colors.transparent,
-                                                                                                        ),
-                                                                                                        icon: SvgPicture.asset(
-                                                                                                          "../assets/imges/check-white.svg",
-                                                                                                          width: 4.17.sp,
-                                                                                                          height: 3.07.sp,
-                                                                                                        ),
-                                                                                                        label: Text(
-                                                                                                          'Yes',
-                                                                                                          style: GoogleFonts.sen(
-                                                                                                            color: ccNeutral0,
-                                                                                                            fontSize: 4.39.sp,
-                                                                                                            fontWeight: FontWeight.w400,
-                                                                                                          ),
-                                                                                                        ), // <-- Text
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                    Padding(
-                                                                                                        padding: EdgeInsets.only(
-                                                                                                      left: 5.25.sp,
-                                                                                                    )),
-                                                                                                  ],
-                                                                                                ),
-                                                                                              )),
-                                                                                    ],
-                                                                                  ),
-                                                                                ),
-                                                                              ],
-                                                                            ),
-                                                                          ),
-                                                                          Padding(
-                                                                              padding: EdgeInsets.only(bottom: 1.95.sp)),
-                                                                        ],
-                                                                      ),
-                                                                      csvertSpace4,
-                                                                      Row(
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.start,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.center,
-                                                                        children: [
-                                                                          Text(
-                                                                            "Display Section ",
-                                                                            style:
-                                                                                GoogleFonts.sen(
-                                                                              fontSize: 4.395.sp,
-                                                                              fontWeight: FontWeight.w400,
-                                                                              color: ccDanger300,
-                                                                            ),
-                                                                          ),
-                                                                          Tooltip(
-                                                                            message:
-                                                                                'You can hide / display the section in Cibus apps',
-                                                                            textStyle:
-                                                                                TextStyle(
-                                                                              color: ccNeutral0,
-                                                                            ),
-                                                                            child:
-                                                                                SvgPicture.asset(
-                                                                              "../assets/imges/warning.svg",
-                                                                              width: 2.417.sp,
-                                                                              height: 2.417.sp,
-                                                                            ),
-                                                                          ),
-                                                                          cshorzSpace16,
-                                                                          SizedBox(
-                                                                            child: FlutterSwitch(
-                                                                                width: 9.67.sp,
-                                                                                height: 5.274.sp,
-                                                                                activeColor: ccSuccess700,
-                                                                                onToggle: (bool value) {},
-                                                                                value: true),
-                                                                          ),
-                                                                        ],
-                                                                      ),
-                                                                      csvertSpace2,
-                                                                    ])))
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
+                                                  onTap: () {
+                                                    model.goToPage('orders');
+                                                  },
                                                 ),
                                               ),
                                             ),
@@ -635,7 +203,7 @@ class OrdersDetailsView extends StatelessWidget {
                                             children: [
                                               cshorzSpace4,
                                               SizedBox(
-                                                width: 12.3.sp,
+                                                width: 30.3.sp,
                                                 child: Text(
                                                   "ID",
                                                   style: GoogleFonts.sen(
@@ -645,7 +213,6 @@ class OrdersDetailsView extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
-                                              cshorzSpace18,
                                               SizedBox(
                                                 width: 38.384.sp,
                                                 child: Center(
@@ -692,7 +259,7 @@ class OrdersDetailsView extends StatelessWidget {
                                               ),
                                               cshorzSpace18,
                                               SizedBox(
-                                                width: 18.46.sp,
+                                                width: 36.46.sp,
                                                 child: Center(
                                                   child: Text(
                                                     "Waiter",
@@ -705,9 +272,8 @@ class OrdersDetailsView extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
-                                              cshorzSpace18,
                                               SizedBox(
-                                                width: 24.1758.sp,
+                                                width: 30.1758.sp,
                                                 child: Center(
                                                   child: Text(
                                                     "Amount",
@@ -737,6 +303,8 @@ class OrdersDetailsView extends StatelessWidget {
                                                   day: 'Today',
                                                   time: '10:15 pm',
                                                   table: 'Garden Table 1',
+                                                  goToPageRequested: (val) =>
+                                                      {model.goToPage(val)},
                                                 );
                                               }),
                                         ),

@@ -11,6 +11,10 @@ class ChangeOrderViewModel extends BaseViewModel {
     switch (pageName) {
       case 'order':
         return _nav.navigateTo(Routes.ordersView);
+      case 'select_table':
+        return _nav.navigateTo(Routes.selectTableView);
+      case 'orders':
+        return _nav.navigateTo(Routes.ordersView);
       case 'pay':
         return _nav.navigateTo(Routes.payView);
       default:

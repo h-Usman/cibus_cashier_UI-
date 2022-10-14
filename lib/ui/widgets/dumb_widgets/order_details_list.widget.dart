@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class OrderDetailListItemWidget extends StatelessWidget {
-  final Function? goToPageRequested;
+  final Function goToPageRequested;
   final Function? goToModalRequested;
   final String id;
   final String iName;
@@ -18,8 +18,8 @@ class OrderDetailListItemWidget extends StatelessWidget {
 
   const OrderDetailListItemWidget({
     Key? key,
-    this.goToPageRequested,
     this.goToModalRequested,
+    required this.goToPageRequested,
     required this.waiter,
     required this.iName,
     required this.type,
@@ -48,7 +48,7 @@ class OrderDetailListItemWidget extends StatelessWidget {
         children: [
           cshorzSpace4,
           SizedBox(
-            width: 12.3.sp,
+            width: 30.3.sp,
             child: Text(
               id,
               style: GoogleFonts.sen(
@@ -58,7 +58,7 @@ class OrderDetailListItemWidget extends StatelessWidget {
               ),
             ),
           ),
-          cshorzSpace18,
+          // cshorzSpace18,
           SizedBox(
             width: 38.384.sp,
             child: Column(
@@ -134,7 +134,7 @@ class OrderDetailListItemWidget extends StatelessWidget {
           ),
           cshorzSpace18,
           SizedBox(
-            width: 18.46.sp,
+            width: 36.46.sp,
             child: Center(
               child: Text(
                 waiter,
@@ -146,9 +146,8 @@ class OrderDetailListItemWidget extends StatelessWidget {
               ),
             ),
           ),
-          cshorzSpace18,
           SizedBox(
-            width: 24.1758.sp,
+            width: 30.1758.sp,
             child: Center(
               child: Text(
                 total,
@@ -160,9 +159,9 @@ class OrderDetailListItemWidget extends StatelessWidget {
               ),
             ),
           ),
-          cshorzSpace4,
+          // cshorzSpace4,
           SizedBox(
-            width: 58.65.sp,
+            width: 56.65.sp,
             // color: ccNutural550,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -172,7 +171,9 @@ class OrderDetailListItemWidget extends StatelessWidget {
                   width: 46.43956.sp,
                   // margin: EdgeInsets.only(left: 3.sp),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      goToPageRequested('pay');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ccDanger300,
                       shape: RoundedRectangleBorder(

@@ -7,12 +7,14 @@ import 'package:flutter_application_1/ui/views/pay/pay_view.dart';
 import 'package:flutter_application_1/ui/views/registartion/registartion_view.dart';
 import 'package:flutter_application_1/ui/views/select_table/select_table_view.dart';
 import 'package:flutter_application_1/ui/views/tables/tables_view.dart';
+import 'package:flutter_application_1/ui/views/wellcome/wellcome_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(
   routes: [
     // uses pages
+    MaterialRoute(page: WellcomeView),
     MaterialRoute(page: PayView),
     MaterialRoute(page: SelectTableView),
     MaterialRoute(page: OrdersDetailsView),

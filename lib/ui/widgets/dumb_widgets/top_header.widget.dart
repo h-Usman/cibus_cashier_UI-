@@ -1632,7 +1632,7 @@ class TopHeaderWidget extends StatelessWidget {
                                                               padding:
                                                                   EdgeInsets
                                                                       .only(
-                                                            left: 5.sp,
+                                                            left: 3.sp,
                                                           )),
                                                           Container(
                                                             height: 9.25.sp,
@@ -4955,7 +4955,7 @@ class TopHeaderWidget extends StatelessWidget {
                                                                     2.197.sp))),
                                                     content: Container(
                                                       width: 176.923.sp,
-                                                      height: 70.40.sp,
+                                                      height: 69.40.sp,
                                                       decoration:
                                                           const BoxDecoration(
                                                               border: Border(

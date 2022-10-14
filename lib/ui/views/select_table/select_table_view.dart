@@ -189,13 +189,13 @@ class SelectTableView extends StatelessWidget {
                                                   Container(
                                                     color: ccDanger100,
                                                     padding: EdgeInsets.only(
-                                                      left: 5.sp,
+                                                      left: 3.sp,
                                                       right: 1.sp,
                                                     ),
                                                     child: Container(
                                                       color: ccDanger100,
                                                       padding: EdgeInsets.only(
-                                                        left: 5.sp,
+                                                        left: 3.sp,
                                                         right: 1.sp,
                                                       ),
                                                       child: Column(
@@ -270,7 +270,7 @@ class SelectTableView extends StatelessWidget {
                                                 children: [
                                                   Padding(
                                                       padding: EdgeInsets.only(
-                                                    left: 5.sp,
+                                                    left: 3.sp,
                                                   )),
                                                   Container(
                                                     height: 9.25.sp,

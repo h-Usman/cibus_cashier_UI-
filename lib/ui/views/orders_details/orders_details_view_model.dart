@@ -18,6 +18,8 @@ class OrdersDetailsViewModel extends BaseViewModel {
         return _nav.navigateTo(Routes.tablesView);
       case 'select_table':
         return _nav.navigateTo(Routes.selectTableView);
+      case 'pay':
+        return _nav.navigateTo(Routes.payView);
       default:
         return;
     }

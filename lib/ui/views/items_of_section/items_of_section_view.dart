@@ -1045,71 +1045,47 @@ class ItemsOfSectionView extends StatelessWidget {
                                                   spacing: 4.sp,
                                                   runSpacing: 4.sp,
                                                   children: [
-                                                    Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Container(
-                                                          width: 42.857.sp,
-                                                          height: 28.351.sp,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: ccNeutral0,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .only(
-                                                              topRight: Radius
-                                                                  .circular(
-                                                                      2.2.sp),
-                                                              topLeft: Radius
-                                                                  .circular(
-                                                                      2.2.sp),
-                                                            ),
-                                                          ),
-                                                          clipBehavior:
-                                                              Clip.antiAlias,
-                                                          child: Image.asset(
-                                                            "../assets/imges/sect.png",
+                                                    SizedBox(
+                                                      width: 42.857.sp,
+                                                      child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .start,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .stretch,
+                                                        children: [
+                                                          Container(
                                                             width: 42.857.sp,
                                                             height: 28.351.sp,
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          width: 42.857.sp,
-                                                          height: 9.45054.sp,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: ccNeutral0,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .only(
-                                                              bottomRight: Radius
-                                                                  .circular(
-                                                                      2.2.sp),
-                                                              bottomLeft: Radius
-                                                                  .circular(
-                                                                      2.2.sp),
-                                                            ),
-                                                          ),
-                                                          child: Container(
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                                    left: 2.sp,
-                                                                    right:
-                                                                        2.sp),
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: ccNeutral0,
-                                                              border:
-                                                                  Border.all(
-                                                                width: 1,
-                                                                color:
-                                                                    ccPrimary300,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        2.2.sp),
                                                               ),
+                                                            ),
+                                                            clipBehavior:
+                                                                Clip.antiAlias,
+                                                            child: Image.asset(
+                                                              "../assets/imges/sect.png",
+                                                              width: 45.857.sp,
+                                                              // height: 28.351.sp,
+                                                            ),
+                                                          ),
+                                                          Container(
+                                                            width: 42.857.sp,
+                                                            height: 9.45054.sp,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: ccNeutral0,
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .only(
@@ -1121,67 +1097,125 @@ class ItemsOfSectionView extends StatelessWidget {
                                                                         2.2.sp),
                                                               ),
                                                             ),
-                                                            clipBehavior:
-                                                                Clip.antiAlias,
-                                                            child: Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                Text(
-                                                                  "Starters",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .sen(
-                                                                    color:
-                                                                        ccNutural550,
-                                                                    fontSize:
-                                                                        3.5164
-                                                                            .sp,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                  ),
+                                                            child: Container(
+                                                              padding: EdgeInsets
+                                                                  .only(
+                                                                      left:
+                                                                          2.sp,
+                                                                      right:
+                                                                          2.sp),
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color:
+                                                                    ccNeutral0,
+                                                                border:
+                                                                    Border.all(
+                                                                  width: 1,
+                                                                  color:
+                                                                      ccPrimary300,
                                                                 ),
-                                                                DropdownButton(
-                                                                  dropdownColor:
-                                                                      ccNeutral0,
-                                                                  borderRadius:
-                                                                      BorderRadius.circular(
-                                                                          2.1978
-                                                                              .sp),
-                                                                  icon:
-                                                                      SvgPicture
-                                                                          .asset(
-                                                                    "../assets/imges/elipse-h.svg",
-                                                                    height:
-                                                                        0.8615
-                                                                            .sp,
-                                                                    width:
-                                                                        3.7362
-                                                                            .sp,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .only(
+                                                                  bottomRight: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                  bottomLeft: Radius
+                                                                      .circular(
+                                                                          2.2.sp),
+                                                                ),
+                                                              ),
+                                                              clipBehavior: Clip
+                                                                  .antiAlias,
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Text(
+                                                                    "Starters",
+                                                                    style:
+                                                                        GoogleFonts
+                                                                            .sen(
+                                                                      color:
+                                                                          ccNutural550,
+                                                                      fontSize:
+                                                                          3.5164
+                                                                              .sp,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w400,
+                                                                    ),
                                                                   ),
-                                                                  underline:
-                                                                      Container(
-                                                                    height: 0.0,
-                                                                    color: Colors
-                                                                        .transparent,
-                                                                  ),
-                                                                  elevation: 0,
-                                                                  items: [
-                                                                    DropdownMenuItem(
-                                                                      value:
-                                                                          "Medium",
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(2.1978.sp),
+                                                                  DropdownButton(
+                                                                    dropdownColor:
+                                                                        ccNeutral0,
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            2.1978.sp),
+                                                                    icon: SvgPicture
+                                                                        .asset(
+                                                                      "../assets/imges/elipse-h.svg",
+                                                                      height:
+                                                                          0.8615
+                                                                              .sp,
+                                                                      width:
+                                                                          3.7362
+                                                                              .sp,
+                                                                    ),
+                                                                    underline:
+                                                                        Container(
+                                                                      height:
+                                                                          0.0,
+                                                                      color: Colors
+                                                                          .transparent,
+                                                                    ),
+                                                                    elevation:
+                                                                        0,
+                                                                    items: [
+                                                                      DropdownMenuItem(
+                                                                        value:
+                                                                            "Medium",
+                                                                        child:
+                                                                            Container(
+                                                                          decoration:
+                                                                              BoxDecoration(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(2.1978.sp),
+                                                                          ),
+                                                                          child:
+                                                                              Row(
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            crossAxisAlignment:
+                                                                                CrossAxisAlignment.center,
+                                                                            children: [
+                                                                              Text(
+                                                                                "Medium",
+                                                                                style: GoogleFonts.sen(
+                                                                                  color: ccNutural550,
+                                                                                  fontSize: 3.0769.sp,
+                                                                                  fontWeight: FontWeight.w400,
+                                                                                ),
+                                                                              ),
+                                                                              Text(
+                                                                                "RM 20.00",
+                                                                                style: GoogleFonts.sen(
+                                                                                  color: ccDanger300,
+                                                                                  fontSize: 3.0769.sp,
+                                                                                  fontWeight: FontWeight.w400,
+                                                                                ),
+                                                                              ),
+                                                                            ],
+                                                                          ),
                                                                         ),
+                                                                      ),
+                                                                      DropdownMenuItem(
+                                                                        value:
+                                                                            "Large",
                                                                         child:
                                                                             Row(
                                                                           mainAxisAlignment:
@@ -1190,7 +1224,7 @@ class ItemsOfSectionView extends StatelessWidget {
                                                                               CrossAxisAlignment.center,
                                                                           children: [
                                                                             Text(
-                                                                              "Medium",
+                                                                              "Large",
                                                                               style: GoogleFonts.sen(
                                                                                 color: ccNutural550,
                                                                                 fontSize: 3.0769.sp,
@@ -1198,7 +1232,7 @@ class ItemsOfSectionView extends StatelessWidget {
                                                                               ),
                                                                             ),
                                                                             Text(
-                                                                              "RM 20.00",
+                                                                              "RM 30.00",
                                                                               style: GoogleFonts.sen(
                                                                                 color: ccDanger300,
                                                                                 fontSize: 3.0769.sp,
@@ -1208,47 +1242,16 @@ class ItemsOfSectionView extends StatelessWidget {
                                                                           ],
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                    DropdownMenuItem(
-                                                                      value:
-                                                                          "Large",
-                                                                      child:
-                                                                          Row(
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.spaceBetween,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.center,
-                                                                        children: [
-                                                                          Text(
-                                                                            "Large",
-                                                                            style:
-                                                                                GoogleFonts.sen(
-                                                                              color: ccNutural550,
-                                                                              fontSize: 3.0769.sp,
-                                                                              fontWeight: FontWeight.w400,
-                                                                            ),
-                                                                          ),
-                                                                          Text(
-                                                                            "RM 30.00",
-                                                                            style:
-                                                                                GoogleFonts.sen(
-                                                                              color: ccDanger300,
-                                                                              fontSize: 3.0769.sp,
-                                                                              fontWeight: FontWeight.w400,
-                                                                            ),
-                                                                          ),
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                  onChanged:
-                                                                      (value) {},
-                                                                ),
-                                                              ],
+                                                                    ],
+                                                                    onChanged:
+                                                                        (value) {},
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      ],
+                                                        ],
+                                                      ),
                                                     ),
                                                     SinglePriceItemWidget(
                                                       lebel: 'BC',

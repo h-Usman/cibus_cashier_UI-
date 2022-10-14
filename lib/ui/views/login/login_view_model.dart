@@ -8,6 +8,7 @@ class LoginViewModel extends BaseViewModel {
   Future<void> init() async {}
 
   goToDashboard() {
+    // _nav.navigateTo(Routes.wellcome);
     _nav.navigateTo(Routes.registartionView);
   }
 }

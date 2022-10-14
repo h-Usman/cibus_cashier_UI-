@@ -436,32 +436,31 @@ class ChangeOrderView extends StatelessWidget {
                                                                           child:
                                                                               SizedBox(
                                                                             width:
-                                                                                35.sp,
+                                                                                25.sp,
                                                                             child:
                                                                                 InkWell(
                                                                               child: Row(
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(
-                                                                                      borderRadius: BorderRadius.circular(2.1978.sp),
+                                                                                    padding: EdgeInsets.only(
+                                                                                      top: 1.5.sp,
+                                                                                      bottom: 1.5.sp,
                                                                                     ),
-                                                                                    child: Row(
-                                                                                      children: [
-                                                                                        Text(
-                                                                                          "Dine-In",
-                                                                                          style: GoogleFonts.sen(
-                                                                                            color: ccNutural550,
-                                                                                            fontSize: 4.3956.sp,
-                                                                                            fontWeight: FontWeight.w400,
-                                                                                          ),
-                                                                                        ),
-                                                                                      ],
+                                                                                    child: Text(
+                                                                                      "Dine-In",
+                                                                                      style: GoogleFonts.sen(
+                                                                                        color: ccNutural550,
+                                                                                        fontSize: 4.3956.sp,
+                                                                                        fontWeight: FontWeight.w400,
+                                                                                      ),
+                                                                                      // selectionColor:
+                                                                                      //     ccDanger300,
                                                                                     ),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                               onTap: () {
-                                                                                Navigator.pop(context);
+                                                                                model.goToPage('select_table');
                                                                               },
                                                                             ),
                                                                           ),
@@ -470,19 +469,88 @@ class ChangeOrderView extends StatelessWidget {
                                                                           value:
                                                                               "Takeaway",
                                                                           child:
-                                                                              Row(
-                                                                            children: [
-                                                                              Text(
-                                                                                "Takeaway",
-                                                                                style: GoogleFonts.sen(
-                                                                                  color: ccNutural550,
-                                                                                  fontSize: 4.3956.sp,
-                                                                                  fontWeight: FontWeight.w400,
-                                                                                ),
+                                                                              SizedBox(
+                                                                            width:
+                                                                                25.sp,
+                                                                            child:
+                                                                                InkWell(
+                                                                              child: Row(
+                                                                                children: [
+                                                                                  Container(
+                                                                                    padding: EdgeInsets.only(
+                                                                                      top: 1.5.sp,
+                                                                                      bottom: 1.5.sp,
+                                                                                    ),
+                                                                                    child: Text(
+                                                                                      "Takeaway",
+                                                                                      style: GoogleFonts.sen(
+                                                                                        color: ccNutural550,
+                                                                                        fontSize: 4.3956.sp,
+                                                                                        fontWeight: FontWeight.w400,
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ],
                                                                               ),
-                                                                            ],
+                                                                              onTap: () {
+                                                                                model.goToPage('orders');
+                                                                              },
+                                                                            ),
                                                                           ),
                                                                         ),
+                                                                        // DropdownMenuItem(
+                                                                        //   value:
+                                                                        //       "Dine-In",
+                                                                        //   child:
+                                                                        //       SizedBox(
+                                                                        //     width:
+                                                                        //         35.sp,
+                                                                        //     child:
+                                                                        //         InkWell(
+                                                                        //       child: Row(
+                                                                        //         children: [
+                                                                        //           Container(
+                                                                        //             decoration: BoxDecoration(
+                                                                        //               borderRadius: BorderRadius.circular(2.1978.sp),
+                                                                        //             ),
+                                                                        //             child: Row(
+                                                                        //               children: [
+                                                                        //                 Text(
+                                                                        //                   "Dine-In",
+                                                                        //                   style: GoogleFonts.sen(
+                                                                        //                     color: ccNutural550,
+                                                                        //                     fontSize: 4.3956.sp,
+                                                                        //                     fontWeight: FontWeight.w400,
+                                                                        //                   ),
+                                                                        //                 ),
+                                                                        //               ],
+                                                                        //             ),
+                                                                        //           ),
+                                                                        //         ],
+                                                                        //       ),
+                                                                        //       onTap: () {
+                                                                        //         Navigator.pop(context);
+                                                                        //       },
+                                                                        //     ),
+                                                                        //   ),
+                                                                        // ),
+                                                                        // DropdownMenuItem(
+                                                                        //   value:
+                                                                        //       "Takeaway",
+                                                                        //   child:
+                                                                        //       Row(
+                                                                        //     children: [
+                                                                        //       Text(
+                                                                        //         "Takeaway",
+                                                                        //         style: GoogleFonts.sen(
+                                                                        //           color: ccNutural550,
+                                                                        //           fontSize: 4.3956.sp,
+                                                                        //           fontWeight: FontWeight.w400,
+                                                                        //         ),
+                                                                        //       ),
+                                                                        //     ],
+                                                                        //   ),
+                                                                        // ),
                                                                       ],
                                                                       onChanged:
                                                                           (value) {},
