@@ -163,6 +163,7 @@ class OrdersView extends StatelessWidget {
                                                         iType: 'Medium',
                                                         price: '20.00',
                                                         total: '20.00',
+                                                        tPrice: '20.00',
                                                       );
                                                     }),
                                               ),
